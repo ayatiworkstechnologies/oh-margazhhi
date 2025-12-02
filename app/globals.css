@@ -49,21 +49,7 @@
 /* ----------------------------------
    Dark Mode
 ------------------------------------*/
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0e0907;
-    --foreground: #f2e8dd;
 
-    --color-primary: #f2e8dd;
-    --color-secondary: #C3AD8A;
-    --color-accent: #bfa17b;
-
-    --surface-100: #33261e;
-    --surface-200: #241b17;
-    --surface-300: #1a1411;
-    --surface-dark: #0a0807;
-  }
-}
 
 /* ----------------------------------
    Tailwind Inline Theme Tokens
