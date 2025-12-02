@@ -37,7 +37,7 @@ export default function ContactSection() {
 
             {/* LOCATION */}
             <div className="flex items-start gap-3">
-              <span className="mt-[2px] text-secondary">
+              <span className="mt-0.5 text-secondary">
                 <FiMapPin size={20} />
               </span>
 
@@ -150,7 +150,7 @@ export default function ContactSection() {
             {errors.message && <p className="text-xs text-red-500">{errors.message.message}</p>}
           </div>
 
-          <Button type="submit" disabled={isSubmitting} className="mt-2 px-10 disabled:opacity-70">
+          <Button type="submit" disabled={isSubmitting} className="mt-2 px-10 text-lg disabled:opacity-70">
             {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
         </form>

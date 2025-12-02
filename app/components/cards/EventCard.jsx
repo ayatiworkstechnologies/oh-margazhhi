@@ -20,7 +20,7 @@ export default function EventCard({ event }) {
         </h3>
 
         {/* Divider */}
-        <div className="mt-2 border-t border-t-[0.25px] border-marg-border/60" />
+        <div className="mt-2 border-t-[0.25px] border-marg-border/60" />
 
         {/* Date + Location */}
         <p className="mt-2 font-sans font-light text-xs sm:text-sm uppercase tracking-[0.15em] text-black/80">

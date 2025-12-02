@@ -44,7 +44,7 @@ export default function SiteHeader() {
       <Container className="flex items-center justify-between py-3">
 
         {/* Logo */}
-        <Link href="#hero" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <Image src="/logo.svg" alt="Logo" width={50} height={40} />
         </Link>
 
