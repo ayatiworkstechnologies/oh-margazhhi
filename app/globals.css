@@ -1,26 +1,151 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap');
+
 @import "tailwindcss";
 
+/* ----------------------------------
+   🌺 OH MARGAZHHI - DESIGN TOKENS
+------------------------------------*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ---- Brand Colors ---- */
+  --background: #FFFFFF;     /* soft cream */
+  --foreground: #27120C;     /* deep brown (primary text) */
+
+  --color-primary: #27120C;  /* new primary */
+  --color-secondary: #B39B77; /* new secondary */
+  --color-accent: #e1c9aa;   /* soft gold highlight */
+
+  --color-border: #d8c4a8;
+  --color-muted: #8b7660;
+
+  /* ---- Surface Shades ---- */
+  --surface-100: #fffdf7;
+  --surface-200: #faf4ec;
+  --surface-300: #f0e4d5;
+  --surface-dark: #1d130f;
+
+  /* ---- Typography ---- */
+  --font-primary: "Playfair", serif; /* Headings */
+  --font-secondary: "Poppins", sans-serif;  /* Body */
+
+  /* ---- Radius ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  /* ---- Shadows ---- */
+  --shadow-soft: 0px 8px 20px rgba(0,0,0,0.06);
+  --shadow-card: 0px 12px 30px rgba(0,0,0,0.08);
+
+  /* ---- Layout Spacing ---- */
+  --space-section-y: 4rem;
+  --space-section-y-lg: 6rem;
+
+  /* ---- Patterns ---- */
+  --pattern-opacity: 0.08;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* ----------------------------------
+   Dark Mode
+------------------------------------*/
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0e0907;
+    --foreground: #f2e8dd;
+
+    --color-primary: #f2e8dd;
+    --color-secondary: #C3AD8A;
+    --color-accent: #bfa17b;
+
+    --surface-100: #33261e;
+    --surface-200: #241b17;
+    --surface-300: #1a1411;
+    --surface-dark: #0a0807;
   }
 }
 
+/* ----------------------------------
+   Tailwind Inline Theme Tokens
+------------------------------------*/
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+
+  --color-border: var(--color-border);
+  --color-muted: var(--color-muted);
+
+  --color-surface-100: var(--surface-100);
+  --color-surface-200: var(--surface-200);
+  --color-surface-300: var(--surface-300);
+  --color-surface-dark: var(--surface-dark);
+
+  --font-serif: var(--font-primary);
+  --font-sans: var(--font-secondary);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+
+  --shadow-soft: var(--shadow-soft);
+  --shadow-card: var(--shadow-card);
+}
+
+/* ----------------------------------
+   Base Styling
+------------------------------------*/
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-secondary); /* Body → Poppins Light */
+}
+
+/* ------------------------------
+   Hero animations
+-------------------------------*/
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
