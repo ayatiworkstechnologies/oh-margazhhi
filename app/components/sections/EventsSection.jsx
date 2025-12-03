@@ -21,12 +21,12 @@ export default function EventsSection() {
   return (
     <section
       id="events"
-      className="relative bg-[url('/event-bg.svg')] bg-cover bg-center py-14 sm:py-16"
+      className="relative  bg-cover bg-center py-14 sm:py-16"
     >
       <Container>
         <div className="flex flex-col items-center gap-8">
 
-          <SectionTitle title="Events" color="text-primary" />
+          <SectionTitle title="Events" color="text-primary" bottomDecoration="/fream-4.svg" />
 
           {/* BUTTONS OUTSIDE ROW */}
           <div className="relative flex w-full items-center">

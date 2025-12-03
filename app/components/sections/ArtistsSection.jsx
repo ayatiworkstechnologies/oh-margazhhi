@@ -38,7 +38,7 @@ export default function ArtistsSection() {
         <SectionTitle
           title="Artists"
           color="text-white"
-          bottomDecoration="/fream-4.svg"
+          bottomDecoration="/fream-8.svg"
           className="mt-20"
         />
 

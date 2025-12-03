@@ -9,7 +9,7 @@ export default function FeaturedGuest() {
     <section className="relative bg-white py-14 sm:py-16">
       
       {/* TOP RIGHT DECORATIVE SVG */}
-      <div className="pointer-events-none absolute right-10 top-10 hidden lg:block">
+      <div className="pointer-events-none absolute right-10 top-20 hidden lg:block">
         <Image
           src="/fream-5.svg"
           alt=""
@@ -48,13 +48,13 @@ export default function FeaturedGuest() {
         </div>
 
         {/* RIGHT — TEXT BLOCK */}
-        <div className="relative md:mt-15">
+        <div className="relative md:mt-18">
           <SectionTitle
             align="left"
             title="Bombay Jayashri - Voice of Serenity"
           />
 
-          <div className="mt-5 text-xl leading-relaxed text-black/80 font-sans font-light">
+          <div className="mt-5 md:max-w-lg text-xl leading-relaxed text-black/80 font-sans font-light">
             <p>
               Bombay Jayashri graces this year’s festival as our distinguished special guest, bringing her timeless voice and serene artistry to the Margazhi season. Her music bridges tradition and emotion with effortless purity, creating an atmosphere of deep calm and devotion. Renowned for her soulful renditions, she has touched audiences worldwide with her meditative style. Her presence adds profound artistic value to our celebration of classical arts. This Margazhi, experience her music as a spiritual journey in itself.
             </p>

@@ -6,6 +6,9 @@ import EventsSection from "./components/sections/EventsSection";
 import ArtistsSection from "./components/sections/ArtistsSection";
 import ContactSection from "./components/sections/ContactSection";
 import MarqueeStrip from "./components/sections/MarqueeStrip";
+import EventCalendarSection from "./components/sections/EventCalendarSection";
+import CalendarSection from "./components/sections/CalendarSection";
+import GallerySection from "./components/sections/GallerySection";
 
 export default function HomePage() {
   return (
@@ -15,7 +18,10 @@ export default function HomePage() {
       <MarqueeStrip />
       <FeaturedGuest />
       <EventsSection />
+      <EventCalendarSection />
+      {/* <CalendarSection /> */}
       <ArtistsSection />
+      <GallerySection />
       <ContactSection />
     </Layout>
   );

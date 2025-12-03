@@ -9,7 +9,7 @@ export default function IntroSection() {
       <Container className="max-w-3xl text-center">
         
         {/* Main text */}
-        <p className="font-serif text-4xl leading-relaxed text-secondary">
+        <p className="font-serif text-4xl leading-relaxed text-primary">
           Oh Margazhhi brings together dancers, musicians, gurus and rasikas to
           experience the sacred quietude of this month through curated
           performances, workshops and satsangs.

@@ -12,8 +12,8 @@
   --background: #FFFFFF;     /* soft cream */
   --foreground: #27120C;     /* deep brown (primary text) */
 
-  --color-primary: #27120C;  /* new primary */
-  --color-secondary: #B39B77; /* new secondary */
+  --color-primary: #550000;  /* new primary */
+  --color-secondary: #EDE8D0; /* new secondary */
   --color-accent: #e1c9aa;   /* soft gold highlight */
 
   --color-border: #d8c4a8;
@@ -134,4 +134,14 @@ body {
   100% {
     transform: translateX(-50%);
   }
+}
+
+/* Hide scrollbar for gallery scroll area but keep scrolling */
+.gallery-scroll {
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE & Edge */
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari */
 }

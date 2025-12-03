@@ -33,18 +33,20 @@ export default function HeroSection() {
         </div>
 
         {/* Image / collage */}
+        {/* Image / collage */}
         <div className="relative flex justify-center md:justify-end opacity-0 animate-[slideInRight_0.7s_ease-out_forwards] [animation-delay:0.15s]">
-          <div className="relative max-w-[420px]">
+          <div className="relative">
             <Image
-              src="/hero-img.png"
+              src="/hero-img.svg"
               alt="Oh Margazhhi classical dancer"
-              width={420}
-              height={260}
-              className="h-auto w-full object-contain"
+              width={500}         // keep natural size
+              height={500}        // adjust based on your original SVG size
+              className="object-contain"
               priority
             />
           </div>
         </div>
+
       </Container>
     </section>
   );

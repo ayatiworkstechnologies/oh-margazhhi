@@ -54,17 +54,17 @@ export default function SiteHeader() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden gap-6 text-[11px] uppercase tracking-[0.16em] md:flex">
+        <nav className="hidden gap-6 text-lg  uppercase  md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={`
-                transition hover:text-secondary
+                transition hover:text-primary
                 ${
                   activeSection === item.href
-                    ? "text-secondary font-medium"
-                    : "text-primary"
+                    ? "text-primary border-b border-b-primary"
+                    : "text-black"
                 }
               `}
             >
