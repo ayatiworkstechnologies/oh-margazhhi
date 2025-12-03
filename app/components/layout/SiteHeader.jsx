@@ -27,7 +27,7 @@ export default function SiteHeader() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.svg" alt="Logo" width={50} height={40} />
+          <Image src="/logo.svg" alt="Logo" width={120} height={40} />
         </Link>
 
         {/* Desktop Nav */}

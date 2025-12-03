@@ -9,11 +9,20 @@ import MarqueeStrip from "./components/sections/MarqueeStrip";
 import EventCalendarSection from "./components/sections/EventCalendarSection";
 import CalendarSection from "./components/sections/CalendarSection";
 import GallerySection from "./components/sections/GallerySection";
+import Hero from "./components/ui/Hero";
 
 export default function HomePage() {
   return (
     <Layout>
-      <HeroSection />
+      <Hero
+      title="Where Margazhi Music Breathes Life Into Tradition Again"
+      description="Celebrate soulful performances honoring culture, devotion, heritage and artistry."
+      dateRange="December 15 – December 30"
+      location="Chennai, Tamil Nadu"
+      imageSrc="/hero-img.svg"
+      imageAlt="OhMargazhi classical dancer"
+    />
+      {/* <HeroSection /> */}
       <IntroSection />
       <MarqueeStrip />
       <FeaturedGuest />
