@@ -56,8 +56,7 @@ export default function FeaturedGuest() {
 
           <div className="mt-5 md:max-w-lg text-xl leading-relaxed text-black/80 font-sans font-light">
             <p>
-              Bombay Jayashri graces this year’s festival as our distinguished special guest, bringing her timeless voice and serene artistry to the Margazhi season. Her music bridges tradition and emotion with effortless purity, creating an atmosphere of deep calm and devotion. Renowned for her soulful renditions, she has touched audiences worldwide with her meditative style. Her presence adds profound artistic value to our celebration of classical arts. This Margazhi, experience her music as a spiritual journey in itself.
-            </p>
+Bombay Jayashri graces this year’s festival as our distinguished special guest, bringing her timeless voice and serene artistry to the Margazhi season. Her music bridges tradition and emotion with effortless purity, creating an atmosphere of deep calm and devotion. Renowned for her soulful renditions, she has touched audiences worldwide with her meditative style. Her presence adds profound artistic value to our celebration of classical arts. This Margazhi, experience her music as a spiritual journey in itself.            </p>
             
           </div>
 

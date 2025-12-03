@@ -25,7 +25,7 @@ export default function ContactSection() {
 
         {/* LEFT SIDE */}
         <div className="space-y-6">
-          <p className="text-3xl border-b border-b-primary inline-block font-serif text-primary">Have a question?</p>
+          <p className="text-3xl border-b border-b-primary inline-block font-serif  text-primary">Have a question?</p>
 
           <h3 className="text-3xl font-sans font-light text-black">
             <span className="font-bold">Write to us</span> and <br />

@@ -9,7 +9,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/about-oh-margazhhi", label: "About Oh Margazhhi" },
+  { href: "/about-ohmargazhi", label: "About OhMargazhi" },
   { href: "/gallery", label: "Gallery" },
   { href: "/events", label: "Event" },
   { href: "/artists", label: "Artists" },
@@ -39,8 +39,8 @@ export default function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className={`
-          relative pb-1 transition text-black hover:text-primary
-          ${isActive ? "text-primary" : ""}
+          relative pb-1 transition font-medium font-serif text-black hover:text-primary
+          ${isActive ? "text-primary font-serif font-semibold" : ""}
         `}
               >
                 {item.label}
@@ -86,8 +86,8 @@ export default function SiteHeader() {
 
                     {/* Animated underline */}
                     <span
-                      className={`absolute left-1/2 bottom-0 h-0.5 w-0 bg-secondary transition-all duration-300 -translate-x-1/2
-            ${isActive ? "w-full" : "hover:w-full"}
+                      className={`absolute left-1/2 bottom-0 h-0.5 w-0 bg-secondary font-serif font-medium transition-all duration-300 -translate-x-1/2
+            ${isActive ? " font-serif font-semibold w-full" : "hover:w-full"}
           `}
                     />
                   </Link>
