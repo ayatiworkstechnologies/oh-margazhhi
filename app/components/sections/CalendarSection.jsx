@@ -93,7 +93,7 @@ export default function CalendarSection() {
         </div>
 
         {/* Days */}
-        <div className="grid grid-cols-7 gap-[4px] text-center text-xs">
+        <div className="grid grid-cols-7 gap-1 text-center text-xs">
           {monthMatrix.map((day, idx) => {
             if (!day) return <span key={idx} />;
 

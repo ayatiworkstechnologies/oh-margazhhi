@@ -25,7 +25,7 @@ export default function ContactSection() {
 
         {/* LEFT SIDE */}
         <div className="space-y-6">
-          <p className="text-2xl font-serif text-secondary">Have a question?</p>
+          <p className="text-3xl border-b border-b-primary inline-block font-serif text-primary">Have a question?</p>
 
           <h3 className="text-3xl font-sans font-light text-black">
             <span className="font-bold">Write to us</span> and <br />
@@ -33,18 +33,18 @@ export default function ContactSection() {
             respond promptly.
           </h3>
 
-          <div className="space-y-4 text-xl font-sans font-light text-black">
+          <div className="space-y-4 text-lg font-sans font-light text-black">
 
             {/* LOCATION */}
             <div className="flex items-start gap-3">
-              <span className="mt-0.5 text-secondary">
+              <span className="mt-0.5 text-primary">
                 <FiMapPin size={20} />
               </span>
 
               <Link
                 href="https://www.google.com/maps/place/Shenstone+Park,+Harrington+Road,+Chetpet,+Chennai"
                 target="_blank"
-                className="hover:text-secondary transition-colors"
+                className="hover:text-primary transition-colors"
               >
                 Shenstone Park, No. 7 Harrington Road, <br />
                 Chetpet (Lady Andal Gate 4) <br />
@@ -54,20 +54,20 @@ export default function ContactSection() {
 
             {/* PHONE NUMBERS */}
             <div className="flex items-center gap-3">
-              <span className="text-secondary">
+              <span className="text-primary">
                 <FiPhone size={20} />
               </span>
 
               <div className="flex flex-col leading-tight">
                 <Link
                   href="tel:+919500081900"
-                  className="hover:text-secondary transition"
+                  className="hover:text-primary transition"
                 >
                   +91 95000 81900
                 </Link>
                 <Link
                   href="tel:+917358438454"
-                  className="hover:text-secondary transition"
+                  className="hover:text-primary transition"
                 >
                   +91 73584 38454
                 </Link>
@@ -76,13 +76,13 @@ export default function ContactSection() {
 
             {/* EMAIL */}
             <div className="flex items-center gap-3">
-              <span className="text-secondary">
+              <span className="text-primary">
                 <FiMail size={20} />
               </span>
 
               <Link
                 href="mailto:contact@ohmargazhii.in"
-                className="hover:text-secondary transition"
+                className="hover:text-primary transition"
               >
                 contact@ohmargazhii.in
               </Link>

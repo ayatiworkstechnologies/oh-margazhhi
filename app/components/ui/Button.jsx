@@ -3,7 +3,7 @@ export default function Button({ children, className = "", ...props }) {
     <button
       className={`
         inline-flex items-center justify-center
-        bg-secondary text-white
+        bg-primary text-white
         px-6 py-2
         text-xl font-serif font-medium
         shadow-[inset_0_1px_0_rgba(255,255,255,0.3)]
