@@ -32,7 +32,7 @@ export default function GallerySection() {
           alt="gallery background"
           width={1600}
           height={1600}
-          className="w-auto max-w-none opacity-30"
+          className="w-auto max-w-none"
         />
       </div>
 

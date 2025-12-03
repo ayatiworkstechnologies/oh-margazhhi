@@ -47,7 +47,7 @@ export default function SiteHeader() {
 
                 {/* Animated underline */}
                 <span
-                  className={`absolute left-1/2 bottom-0 h-[2px] w-0 bg-primary transition-all duration-300 -translate-x-1/2
+                  className={`absolute left-1/2 bottom-0 h-0.5 w-0 bg-primary transition-all duration-300 -translate-x-1/2
             ${isActive ? "w-full" : "group-hover:w-full hover:w-full"}
           `}
                 />
@@ -86,7 +86,7 @@ export default function SiteHeader() {
 
                     {/* Animated underline */}
                     <span
-                      className={`absolute left-1/2 bottom-0 h-[2px] w-0 bg-secondary transition-all duration-300 -translate-x-1/2
+                      className={`absolute left-1/2 bottom-0 h-0.5 w-0 bg-secondary transition-all duration-300 -translate-x-1/2
             ${isActive ? "w-full" : "hover:w-full"}
           `}
                     />
