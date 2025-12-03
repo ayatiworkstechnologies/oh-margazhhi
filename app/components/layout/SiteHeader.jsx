@@ -1,51 +1,28 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import Container from "../ui/Container";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const navItems = [
-  { href: "#hero", label: "Home" },
-  { href: "#about", label: "About Oh Margazhhi" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#events", label: "Event" },
-  { href: "#artists", label: "Artists" },
+  { href: "/", label: "Home" },
+  { href: "/about-oh-margazhhi", label: "About Oh Margazhhi" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/events", label: "Event" },
+  { href: "/artists", label: "Artists" },
 ];
 
 export default function SiteHeader() {
-  const [activeSection, setActiveSection] = useState("#hero");
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
-  // --- Scroll Spy Logic ---
-  useEffect(() => {
-    const handleScroll = () => {
-      let current = "#hero";
-
-      navItems.forEach((item) => {
-        const section = document.querySelector(item.href);
-        if (section) {
-          const top = section.offsetTop - 120;
-          if (window.scrollY >= top) {
-            current = item.href;
-          }
-        }
-      });
-
-      setActiveSection(current);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // close menu when clicking nav
   const handleNavClick = () => setIsOpen(false);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-border bg-background/90 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-border bg-background">
       <Container className="flex items-center justify-between py-3">
 
         {/* Logo */}
@@ -54,30 +31,38 @@ export default function SiteHeader() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden gap-6 text-lg  uppercase  md:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`
-                transition hover:text-primary
-                ${
-                  activeSection === item.href
-                    ? "text-primary border-b border-b-primary"
-                    : "text-black"
-                }
-              `}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="hidden gap-6 text-lg  md:flex">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`
+          relative pb-1 transition text-black hover:text-primary
+          ${isActive ? "text-primary" : ""}
+        `}
+              >
+                {item.label}
+
+                {/* Animated underline */}
+                <span
+                  className={`absolute left-1/2 bottom-0 h-[2px] w-0 bg-primary transition-all duration-300 -translate-x-1/2
+            ${isActive ? "w-full" : "group-hover:w-full hover:w-full"}
+          `}
+                />
+              </Link>
+            );
+          })}
         </nav>
+
 
         {/* Mobile Menu Toggle Button */}
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-primary"
+          aria-label="Toggle navigation"
         >
           {isOpen ? <FiX size={26} /> : <FiMenu size={26} />}
         </button>
@@ -87,25 +72,29 @@ export default function SiteHeader() {
       {isOpen && (
         <div className="border-t border-border bg-background md:hidden transition-all duration-300">
           <Container>
-            <nav className="flex flex-col items-center text-center gap-4 py-4 text-[11px] uppercase tracking-[0.16em]">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={handleNavClick}
-                  className={`
-                    py-1 transition
-                    ${
-                      activeSection === item.href
-                        ? "text-secondary font-medium"
-                        : "text-primary"
-                    }
-                  `}
-                >
-                  {item.label}
-                </Link>
-              ))}
+            <nav className="flex flex-col items-center gap-4 py-4 text-xs  tracking-[0.16em] text-center">
+              {navItems.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={handleNavClick}
+                    className="relative pb-1 transition text-primary hover:text-secondary"
+                  >
+                    {item.label}
+
+                    {/* Animated underline */}
+                    <span
+                      className={`absolute left-1/2 bottom-0 h-[2px] w-0 bg-secondary transition-all duration-300 -translate-x-1/2
+            ${isActive ? "w-full" : "hover:w-full"}
+          `}
+                    />
+                  </Link>
+                );
+              })}
             </nav>
+
           </Container>
         </div>
       )}
