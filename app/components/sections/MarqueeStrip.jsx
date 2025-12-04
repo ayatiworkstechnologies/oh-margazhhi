@@ -3,9 +3,9 @@
 import Image from "next/image";
 
 const messages = [
-  "Keep Moving. Keep Discovering Margazhi.",
+  "Keep Moving. Keep Discovering MaRgazhi.",
   "Flowing Through Rhythm, Colour & Culture.",
-  "Keep Moving. Keep Discovering Margazhi.",
+  "Keep Moving. Keep Discovering MaRgazhi.",
 ];
 
 export default function MarqueeStrip() {

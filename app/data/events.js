@@ -1,7 +1,7 @@
 export const events = [
   {
     id: 1,
-    title: "Opening Night - Margazhi Mandapam",
+    title: "Opening Night - MaRgazhi Mandapam",
     image: "/event-1.png",
     dateTime: "Dec 16 | 6:00 PM",
     location: "Chennai",
@@ -22,7 +22,7 @@ export const events = [
   },
   {
     id: 4,
-    title: "Margazhi Sangeetha Nrithya Utsavam",
+    title: "MaRgazhi Sangeetha Nrithya Utsavam",
     image: "/event-4.png",
     dateTime: "Dec 19 | 6:00 PM",
     location: "Chennai",

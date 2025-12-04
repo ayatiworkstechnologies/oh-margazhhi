@@ -10,14 +10,14 @@ export default function IntroSection() {
         
         {/* Main text */}
         <p className="font-serif md:max-w-5xl mx-auto text-4xl leading-relaxed text-primary">
-          Oh Margazhi brings together dancers, musicians, gurus and rasikas to experience the sacred quietude of this month through curated performances, workshops and satsangs.
+          Oh MaRgazhi brings together dancers, musicians, gurus and rasikas to experience the sacred quietude of this month through curated performances, workshops and satsangs.
         </p>
 
         {/* Decorative frame image */}
         <div className="mt-6 flex items-center justify-center">
           <Image
             src="/fream-1.svg"
-            alt="OhMargazhi Frame"
+            alt="OhMaRgazhi Frame"
             width={250}
             height={40}
             className=""

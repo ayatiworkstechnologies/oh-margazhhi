@@ -15,7 +15,7 @@ const visionItems = [
     },
     {
         title: "Inspire New Audiences",
-        body: "We welcome learners, young performers, and art lovers to experience Margazhii meaningfully.",
+        body: "We welcome learners, young performers, and art lovers to experience MaRgazhi meaningfully.",
     },
     {
         title: "Celebrate Artistic Diversity",

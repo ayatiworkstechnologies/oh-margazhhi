@@ -7,7 +7,7 @@ import SectionTitle from "../ui/SectionTitle";
 
 const eventMap = {
   16: {
-    title: "Opening Night - Margazhii Mandapam",
+    title: "Opening Night - MaRgazhi Mandapam",
     date: "December 16",
     time: "6.00 PM",
     venue: "Chennai",

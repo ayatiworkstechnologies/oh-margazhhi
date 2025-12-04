@@ -81,10 +81,10 @@ export default function ContactSection() {
               </span>
 
               <Link
-                href="mailto:contact@ohmargazhii.in"
+                href="mailto:contact@ohMaRgazhi.in"
                 className="hover:text-primary transition"
               >
-                contact@ohmargazhii.in
+                contact@ohMaRgazhi.in
               </Link>
             </div>
           </div>

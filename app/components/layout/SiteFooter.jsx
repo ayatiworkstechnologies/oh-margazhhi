@@ -14,7 +14,7 @@ export default function SiteFooter() {
         >
           {/* Left side */}
           <p className="whitespace-nowrap text-sm sm:text-base">
-            © 2025 <span className="font-secondary">OhMargazhi</span>
+            © 2025 <span className="font-secondary">OhMaRgazhi</span>
           </p>
 
           {/* Divider */}

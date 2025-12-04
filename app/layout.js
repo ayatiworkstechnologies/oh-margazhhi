@@ -12,9 +12,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "OhMargazhi - A Season of Sacred Rhythm & Raga",
+  title: "OhMaRgazhi - A Season of Sacred Rhythm & Raga",
   description:
-    "An intimate Margazhi arts festival celebrating classical dance, music, and devotion in Chennai.",
+    "An intimate MaRgazhi arts festival celebrating classical dance, music, and devotion in Chennai.",
 };
 
 export default function RootLayout({ children }) {

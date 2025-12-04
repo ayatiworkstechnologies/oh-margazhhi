@@ -13,7 +13,7 @@ export default function HeroSection() {
         {/* Text */}
         <div className="space-y-6 opacity-0 animate-[slideInLeft_0.7s_ease-out_forwards]">
           <h1 className="font-serif  text-xl sm:text-2xl md:text-4xl text-surface-100">
-            Where Margazhi Music Breathes Life
+            Where MaRgazhi Music Breathes Life
             Into Tradition Again
           </h1>
 
@@ -37,7 +37,7 @@ export default function HeroSection() {
           <div className="relative">
             <Image
               src="/hero-img.svg"
-              alt="OhMargazhi classical dancer"
+              alt="OhMaRgazhi classical dancer"
               width={550}         // keep natural size
               height={600}        // adjust based on your original SVG size
               className="object-contain"

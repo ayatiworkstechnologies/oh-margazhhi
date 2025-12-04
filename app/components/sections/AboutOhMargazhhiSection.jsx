@@ -36,7 +36,7 @@ export default function AboutOhMargazhhiSection() {
 
             {/* DESCRIPTION */}
             <p className="text-xl md:text-lg font-sans font-light leading-relaxed text-black mt-5 md:mt-10 mb-4">
-              OhMargazhi is a curated arts festival born from the sacred energy of the Margazhi season. It brings together dancers, musicians, gurus, and rasikas in a space of tradition, purity, and artistic sincerity. Every event here is designed as an offering - an experience, not a performance.
+              OhMaRgazhi is a curated arts festival born from the sacred energy of the MaRgazhi season. It brings together dancers, musicians, gurus, and rasikas in a space of tradition, purity, and artistic sincerity. Every event here is designed as an offering - an experience, not a performance.
             </p>
 
            

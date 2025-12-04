@@ -9,7 +9,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/about-ohmargazhi", label: "About OhMargazhi" },
+  { href: "/about-ohmargazhi", label: "About OhMaRgazhi" },
   { href: "/gallery", label: "Gallery" },
   { href: "/events", label: "Event" },
   { href: "/artists", label: "Artists" },

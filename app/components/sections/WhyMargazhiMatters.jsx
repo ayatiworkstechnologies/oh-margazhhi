@@ -12,11 +12,11 @@ export default function WhyMargazhiMatters() {
           {/* LEFT: TEXT */}
           <div className="max-w-xl">
             <h2 className="font-serif text-4xl sm:text-5xl text-primary mb-4">
-              Why Margazhi Matters
+              Why MaRgazhi Matters
             </h2>
 
             <p className="text-lg sm:text-xl leading-relaxed text-black/80 font-sans font-light mt-5 md:mt-15">
-Margazhi is a month of quiet devotion, early dawn hymns, and spiritual introspection. For centuries, it has been the heart of India’s classical arts season. Dancers and musicians dedicate this time to offering their craft with sincerity and discipline. Oh Margazhi carries this legacy forward, presenting art in its purest, most heartfelt form. Here, every step, note, and gesture becomes a prayer.
+MaRgazhi is a month of quiet devotion, early dawn hymns, and spiritual introspection. For centuries, it has been the heart of India’s classical arts season. Dancers and musicians dedicate this time to offering their craft with sincerity and discipline. Oh MaRgazhi carries this legacy forward, presenting art in its purest, most heartfelt form. Here, every step, note, and gesture becomes a prayer.
             </p>
 
             {/* small underline / arrow */}
@@ -34,7 +34,7 @@ Margazhi is a month of quiet devotion, early dawn hymns, and spiritual introspec
           <div className="flex justify-center md:justify-end">
             <Image
               src="/about-img-3.png"  // that kolam + lamp graphic
-              alt="Margazhi kolam and lamp"
+              alt="MaRgazhi kolam and lamp"
               width={420}
               height={450}
               className="h-auto w-full "
