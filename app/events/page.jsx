@@ -1,4 +1,5 @@
 import Layout from "../components/layout/Layout";
+import EventScheduleSection from "../components/sections/EventScheduleSection";
 import Hero from "../components/ui/Hero";
 
 export default function EventsPage() {
@@ -13,6 +14,7 @@ export default function EventsPage() {
               imageSrc="/hero-img.svg"
               imageAlt="About OhMargazhi classical dancer"
             />
+            <EventScheduleSection />
     </Layout>
   );
 }

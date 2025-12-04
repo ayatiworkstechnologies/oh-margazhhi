@@ -26,91 +26,100 @@ const visionItems = [
 export default function VisionPurposeSection() {
     return (
         <section className="relative bg-white py-12 sm:py-14">
-            <Container>
-                <div className="relative flex items-stretch gap-6">
+            {/* <Container> */}
+            <div className="relative flex items-stretch gap-6 px-5">
 
-                    {/* LEFT VERTICAL FRAME */}
-                    <div className="hidden lg:flex flex-col justify-center">
-                        <Image
-                            src="/fream-9.svg"        // vertical border svg
-                            alt=""
-                            width={60}
-                            height={260}
-                            className="h-92 w-auto"
+                {/* LEFT VERTICAL FRAME */}
+                <div className="hidden lg:flex flex-col justify-center">
+                    <Image
+                        src="/fream-9.svg"        // vertical border svg
+                        alt=""
+                        width={60}
+                        height={260}
+                        className=" w-auto"
+                    />
+                </div>
+
+                {/* CENTER CONTENT */}
+                <div className="flex-1">
+                    {/* Title + small underline like reference */}
+                    <div className="flex flex-col items-center">
+                        <SectionTitle
+                            title="Our Vision & Purpose"
+                            color="text-primary"
+                            bottomDecoration="/fream-4.svg"
+
                         />
+
                     </div>
 
-                    {/* CENTER CONTENT */}
-                    <div className="flex-1">
-                        {/* Title + small underline like reference */}
-                        <div className="flex flex-col items-center">
-                            <SectionTitle
-                                title="Our Vision & Purpose"
-                                color="text-primary"
-                                bottomDecoration="/fream-4.svg"
-
-                            />
-
-                        </div>
-
-                        {/* Cards row */}
-                        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                            {visionItems.map((item) => (
-                                <article
-                                    key={item.title}
-                                    className="flex flex-col bg-primary px-6 py-6 text-center text-white"
-                                >
+                    {/* Cards row */}
+                    <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                        {visionItems.map((item) => (
+                            <article
+                                key={item.title}
+                                className="flex flex-col bg-primary  text-center text-white"
+                            >
+                                <div className="px-4 py-10">
                                     {/* Card title */}
-                                    <h3 className="font-serif text-[15px] font-semibold tracking-wide">
+                                    <h3 className="font-serif text-xl font-semibold tracking-wide mt-5">
                                         {item.title}
                                     </h3>
+
                                     <Image
-                                        src="/fream-12.svg"        // vertical border svg
+                                        src="/fream-12.svg"
                                         alt=""
-                                        width={200}
+                                        width={160}
                                         height={40}
-                                        className=""
+                                        className="m-4 mx-auto"   // ⭐ centers the image
                                     />
 
 
+
                                     {/* Body */}
-                                    <p className="flex-1 text-sm leading-relaxed font-secondary font-light text-surface-100/90">
+                                    <p className="flex-1 text-lg font-sans font-light text-secondary mt-5">
                                         {item.body}
                                     </p>
 
                                     {/* Bottom motif + border strip */}
-                                    <div className="mt-6 flex flex-col items-center gap-3">
+                                    <div className="mt-6 flex justify-center pt-4">
                                         <Image
                                             src="/fream-11.svg"   // small kolam / motif svg
                                             alt=""
-                                            width={32}
-                                            height={32}
+                                            width={82}
+                                            height={82}
                                         />
 
                                     </div>
-                                    <Image
-                                        src="/fream-10.svg" // thin decorative strip (optional)
-                                        alt=""
-                                        width={360}
-                                        height={20}
-                                    />
-                                </article>
-                            ))}
-                        </div>
-                    </div>
+                                </div>
 
-                    {/* RIGHT VERTICAL FRAME */}
-                    <div className="hidden lg:flex flex-col justify-center">
-                        <Image
-                            src="/fream-9.svg"
-                            alt=""
-                            width={60}
-                            height={260}
-                            className="h-72 w-auto rotate-180"
-                        />
+                                <div className="mt-auto flex justify-center py-2">
+                                    <Image
+                                        src="/fream-10.svg"
+                                        alt="decorative bottom strip"
+                                        width={450}      // make smaller
+                                        height={50}
+                                        className="mx-auto"
+                                    />
+                                </div>
+
+                            </article>
+                        ))}
                     </div>
                 </div>
-            </Container>
+
+                {/* RIGHT VERTICAL FRAME */}
+                <div className="hidden lg:flex flex-col justify-center">
+                    <Image
+                        src="/fream-9.svg"
+                        alt=""
+                        width={60}
+                        height={260}
+                        className=" w-auto rotate-180"
+                    />
+                </div>
+            </div>
+            {/* </Container> */}
         </section>
     );
 }

@@ -1,4 +1,5 @@
 import Layout from "../components/layout/Layout";
+import ArtistsPageSection from "../components/sections/ArtistsPageSection";
 import Hero from "../components/ui/Hero";
 
 export default function ArtistsPage() {
@@ -13,6 +14,7 @@ export default function ArtistsPage() {
               imageSrc="/hero-img.svg"
               imageAlt="About OhMargazhi classical dancer"
             />
+            <ArtistsPageSection />
     </Layout>
   );
 }

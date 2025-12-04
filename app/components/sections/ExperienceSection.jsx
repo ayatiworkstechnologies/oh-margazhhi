@@ -63,16 +63,7 @@ export default function ExperienceSection() {
                     {items.map((text, idx) => (
                         <div
                             key={idx}
-                            className="
-                bg-white
-                text-primary 
-                px-6 
-                py-3 
-                w-80
-                text-sm 
-                font-sans 
-                shadow-lg
-              "
+                            className=" bg-white text-primary py-3 w-100 text-2xl font-sans font-light shadow-lg"
                         >
                             {text}
                         </div>

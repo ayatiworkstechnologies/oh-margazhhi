@@ -21,31 +21,25 @@ export default function AboutOhMargazhhiSection() {
           </div>
 
           {/* RIGHT WHITE CONTENT */}
-          <div className="bg-white px-8 py-10 md:py-14 relative">
+          <div className="bg-white px-8 md:px-15 py-10 md:py-14 m-5 md:m-10 relative">
 
             {/* MAIN TITLE */}
-            <h2 className="font-serif text-2xl md:text-3xl text-primary">
+            <h2 className="font-serif text-4xl md:text-5xl text-primary">
               About OhMargazhhi
             </h2>
 
             
             {/* SUBTITLE */}
-            <p className="text-[15px] md:text-base leading-relaxed text-muted mb-4">
+            <p className=" font-serif text-xl md:text-2xl leading-relaxed text-black mb-4 mt-5 md:mt-10">
               A celebration of devotion, rhythm, and timeless Indian classical arts.
             </p>
 
             {/* DESCRIPTION */}
-            <p className="text-[15px] md:text-base leading-relaxed text-primary/80 mb-4">
-              OhMargazhhi is a curated arts festival born from the sacred 
-              energy of the Margazhi season. It brings together dancers, 
-              musicians, gurus, and rasikas in a space of tradition, purity, 
-              and artistic sincerity.
+            <p className="text-xl md:text-lg font-sans font-light leading-relaxed text-black mt-5 md:mt-10 mb-4">
+              OhMargazhi is a curated arts festival born from the sacred energy of the Margazhi season. It brings together dancers, musicians, gurus, and rasikas in a space of tradition, purity, and artistic sincerity. Every event here is designed as an offering - an experience, not a performance.
             </p>
 
-            <p className="text-[15px] md:text-base leading-relaxed text-primary/80">
-              Every event here is designed as an offering — an experience, 
-              not a performance.
-            </p>
+           
 
             {/* BOTTOM ARROW ICON */}
             <div className="mt-6">
