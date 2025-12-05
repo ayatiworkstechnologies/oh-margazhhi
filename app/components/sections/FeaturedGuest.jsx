@@ -48,7 +48,7 @@ export default function FeaturedGuest() {
         <div className="relative">
           <SectionTitle
             align="left"
-            title="Bombay Jayashri - Voice of Serenity"
+            title="Aruna Sairam - Voice of Devotion"
           />
 
           <div className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-xl leading-relaxed text-black font-sans font-light space-y-3">
