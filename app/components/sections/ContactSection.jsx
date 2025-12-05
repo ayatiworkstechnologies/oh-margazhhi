@@ -60,13 +60,12 @@ export default function ContactSection() {
             <div className="flex items-start gap-3">
               <span className="mt-0.5 text-primary"><FiMapPin size={20} /></span>
               <Link
-                href="https://www.google.com/maps/place/Shenstone+Park,+Harrington+Road,+Chetpet,+Chennai"
+                href="https://maps.app.goo.gl/WMY25mGMd5J8dMWDA"
                 target="_blank"
                 className="hover:text-primary transition-colors"
               >
-                Shenstone Park, No. 7 Harrington Road, <br />
-                Chetpet (Lady Andal Gate 4) <br />
-                Chennai - 600031
+                92/1, Anand Nagar Main Rd, MCN Nagar, <br />Okklyam, Thoraipakkam, <br /> Tamil Nadu 600097
+                
               </Link>
             </div>
 

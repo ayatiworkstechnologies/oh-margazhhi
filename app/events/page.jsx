@@ -10,7 +10,7 @@ export default function EventsPage() {
               description="Immerse in a future-ready festival where legacy performances meet evolving artistic expression."
               dateRange="December 15 – December 30"
               location="Chennai, Tamil Nadu"
-              imageSrc="/hero-img.svg"
+              imageSrc="/event-banner.svg"
               imageAlt="About OhMaRgazhi classical dancer"
             />
             <EventScheduleSection />

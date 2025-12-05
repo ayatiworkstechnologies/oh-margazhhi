@@ -26,7 +26,7 @@ const visionItems = [
 export default function VisionPurposeSection() {
     return (
         <section className="relative bg-white py-12 sm:py-14">
-            {/* <Container> */}
+            <Container>
             <div className="relative flex items-stretch gap-6 px-5">
 
                 {/* LEFT VERTICAL FRAME */}
@@ -119,7 +119,7 @@ export default function VisionPurposeSection() {
                     />
                 </div>
             </div>
-            {/* </Container> */}
+            </Container>
         </section>
     );
 }

@@ -16,7 +16,7 @@ const items = [
 export default function ExperienceSection() {
     return (
         <section className="relative bg-primary py-16 text-center overflow-hidden">
-
+<Container>
             {/* 🔹 TOP BORDER PATTERN */}
             <div className="absolute top-0 inset-x-0">
                 <Image
@@ -39,7 +39,7 @@ export default function ExperienceSection() {
                 />
             </div>
 
-            <Container className="relative z-10 py-20">
+            <div className="relative z-10 py-20">
 
                 {/* TITLE */}
 
@@ -70,6 +70,7 @@ export default function ExperienceSection() {
                     ))}
                 </div>
 
+            </div>
             </Container>
         </section>
     );
