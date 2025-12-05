@@ -130,7 +130,7 @@ export default function GallerySection() {
 
       {/* ⭐ MODAL OVERLAY ⭐ */}
       {open && (
-        <div className="fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
           {/* IMAGE */}
           <div className="relative max-w-4xl w-full flex justify-center">
             <Image

@@ -100,7 +100,7 @@ export default function EventCalendarSection() {
             {/* DETAILS PANEL (7/12 on md+, full-width on mobile) */}
             <div className="md:col-span-7 md:border-l md:border-border/60 md:pl-6 lg:pl-8 flex flex-col md:flex-row gap-6">
               {/* POSTER (single image for the date) */}
-              <div className="w-full md:w-40 sm:w-44 md:w-52 lg:w-64 shrink-0 flex justify-center md:justify-start">
+              <div className="w-full sm:w-44 md:w-52 lg:w-64 shrink-0 flex justify-center md:justify-start">
                 {posterImage && (
                   <Image
                     src={posterImage}
@@ -188,7 +188,7 @@ function DetailRow({ label, value }) {
   if (!value) return null;
   return (
     <p className="flex gap-2 justify-center md:justify-start">
-      <span className="min-w-[70px] sm:min-w-[80px] font-semibold text-xs sm:text-sm">
+      <span className="min-w-[70px] sm:min-w-20 font-semibold text-xs sm:text-sm">
         {label} :
       </span>
       <span className="font-light text-xs sm:text-sm md:text-base">

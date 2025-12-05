@@ -8,7 +8,7 @@ export default function IntroSection() {
     <section id="about" className="bg-surface-100 py-10 sm:py-14 lg:py-16">
       <Container className="max-w-3xl text-center md:px-30">
         {/* Main text */}
-        <p className="font-serif mx-auto text-2xl sm:text-3xl md:text-4xl leading-relaxed sm:leading-relaxed md:leading-[1.5] text-primary">
+        <p className="font-serif mx-auto text-2xl sm:text-3xl md:text-4xl leading-relaxed sm:leading-relaxed md:leading-normal text-primary">
           Oh MaRgazhi brings together dancers, musicians, gurus and rasikas to
           experience the sacred quietude of this month through curated
           performances, workshops and satsangs.
