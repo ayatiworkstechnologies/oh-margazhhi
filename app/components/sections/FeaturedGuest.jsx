@@ -35,7 +35,7 @@ export default function FeaturedGuest() {
           {/* MAIN IMAGE */}
           <div className="overflow-hidden shadow-lg max-w-xs sm:max-w-sm md:max-w-full">
             <Image
-              src="/about-img.png"
+              src="/about-img-1.png"
               alt="Bombay Jayashri"
               width={480}
               height={600}

@@ -6,9 +6,8 @@ export default function ArtistsPage() {
   return (
     <Layout>
       <Hero
-              title="Eight Chords Unite Creating Magical 
-      MaRgazhi Evenings for Everyone "
-              description="Celebrate classical artistry with performances curated for music lovers across generations."
+              title="Margazhi Evenings Filled with Music, Culture, Devotion and Spirit "
+              description="Experience concerts celebrating tradition, maestros, rhythm, devotion and Margazhi spirit."
               dateRange="December 15 – December 30"
               location="Chennai, Tamil Nadu"
               imageSrc="/hero-img.svg"
