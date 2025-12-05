@@ -21,10 +21,10 @@ export default function AboutOhMargazhhiSection() {
 
 
           {/* RIGHT WHITE CONTENT */}
-          <div className="bg-white px-8 md:px-15 py-10 md:py-14 m-5 md:m-10 relative">
+          <div className="bg-white px-8 md:px-15 py-10 md:py-14  md:my-10 relative">
             {/* MAIN TITLE */}
             <h2 className="font-serif text-4xl md:text-5xl text-primary">
-              About OhMargazhhi
+              About OhMaRgazhi
             </h2>
 
             {/* SUBTITLE */}

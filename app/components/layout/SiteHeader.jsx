@@ -23,11 +23,11 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-30 border-b border-border bg-background">
-      <Container className="flex items-center justify-between py-3">
+      <Container className="flex items-center justify-between py-2">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.svg" alt="Logo" width={120} height={40} />
+          <Image src="/logo.svg" alt="Logo" width={150} height={60} />
         </Link>
 
         {/* Desktop Nav */}

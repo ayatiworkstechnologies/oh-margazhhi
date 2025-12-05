@@ -81,8 +81,8 @@ export default function ContactSection() {
             {/* EMAIL */}
             <div className="flex items-center gap-3">
               <span className="text-primary"><FiMail size={20} /></span>
-              <Link href="mailto:contact@ohMaRgazhi.in" className="hover:text-primary transition">
-                contact@ohMaRgazhi.in
+              <Link href="mailto:contact@ohmargazhi.com" className="hover:text-primary transition">
+                contact@ohmargazhi.com
               </Link>
             </div>
           </div>
