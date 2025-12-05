@@ -78,7 +78,7 @@ export default function EventScheduleSection() {
             return (
               <article
                 key={group.date}
-                className="grid gap-4 overflow-hidden border border-border/60 bg-white shadow-soft md:grid-cols-[minmax(0,220px)_80px_minmax(0,1fr)]"
+                className="grid gap-4 overflow-hidden border border-border/60 bg-white md:grid-cols-[minmax(0,220px)_80px_minmax(0,1fr)]"
               >
                 {/* Image */}
                 <div className="relative">
@@ -91,7 +91,7 @@ export default function EventScheduleSection() {
                 </div>
 
                 {/* Date Block */}
-                <div className="flex items-center justify-center border-y md:border-y-0 md:border-l border-border/60 bg-surface-100">
+                <div className="flex items-center justify-center bg-surface-100">
                   <div className="flex flex-col items-center leading-none text-primary">
                     <span className="font-serif tracking-[0.15em] text-xl">
                       {monthShort}
