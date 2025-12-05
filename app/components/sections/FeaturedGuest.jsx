@@ -8,7 +8,7 @@ export default function FeaturedGuest() {
   return (
     <section className="relative bg-white py-10 sm:py-12 lg:py-16">
       {/* TOP RIGHT DECORATIVE SVG – only on large screens */}
-      <div className="pointer-events-none absolute right-4 top-4 hidden lg:block">
+      {/* <div className="pointer-events-none absolute right-4 top-4 hidden lg:block">
         <Image
           src="/fream-5.svg"
           alt=""
@@ -16,7 +16,7 @@ export default function FeaturedGuest() {
           height={80}
           className=""
         />
-      </div>
+      </div> */}
 
       <Container className="relative grid gap-8 lg:gap-12 items-start md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         {/* LEFT — PATTERN + IMAGE */}
