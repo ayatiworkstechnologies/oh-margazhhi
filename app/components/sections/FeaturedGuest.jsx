@@ -14,7 +14,7 @@ export default function FeaturedGuest() {
           alt=""
           width={140}
           height={80}
-          className="opacity-80"
+          className=""
         />
       </div>
 
@@ -26,9 +26,9 @@ export default function FeaturedGuest() {
             <Image
               src="/fream-6.svg"
               alt=""
-              width={100}
+              width={400}
               height={500}
-              className="h-full w-auto opacity-90"
+              className="h-full w-auto"
             />
           </div>
 

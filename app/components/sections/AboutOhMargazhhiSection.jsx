@@ -6,7 +6,7 @@ import Container from "../ui/Container";
 export default function AboutOhMargazhhiSection() {
   return (
     <section id="about" className="">
-      {/* <Container> */}
+      <Container>
       <div className="mx-auto grid max-w-8xl overflow-hidden md:grid-cols-2">
         {/* LEFT FULL IMAGE */}
         <div className="relative h-full min-h-[360px] bg-primary">
@@ -63,7 +63,7 @@ export default function AboutOhMargazhhiSection() {
           </div>
         </div>
       </div>
-      {/* </Container> */}
+      </Container>
     </section>
   );
 }
