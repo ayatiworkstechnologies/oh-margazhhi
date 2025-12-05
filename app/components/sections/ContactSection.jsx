@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 import Link from "next/link";
 import Container from "../ui/Container";
@@ -14,9 +16,26 @@ export default function ContactSection() {
     formState: { errors, isSubmitting },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Contact form:", data);
-    reset();
+  const [status, setStatus] = useState("");
+
+  const onSubmit = async (data) => {
+    setStatus("");
+
+    try {
+      const result = await emailjs.send(
+        "service_qzvuh3m",     // <-- Replace
+        "template_be3ifcu",    // <-- Replace
+        data,
+        "mCbYhCaGgh5O1Bjjy"      // <-- Replace
+      );
+
+      console.log("EmailJS Success:", result.text);
+      setStatus("Your message has been sent!");
+      reset();
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setStatus("Something went wrong. Try again.");
+    }
   };
 
   return (
@@ -25,7 +44,9 @@ export default function ContactSection() {
 
         {/* LEFT SIDE */}
         <div className="space-y-6">
-          <p className="text-3xl border-b border-b-primary inline-block font-serif  text-primary">Have a question?</p>
+          <p className="text-3xl border-b border-b-primary inline-block font-serif text-primary">
+            Have a question?
+          </p>
 
           <h3 className="text-3xl font-sans font-light text-black">
             <span className="font-bold">Write to us</span> and <br />
@@ -37,10 +58,7 @@ export default function ContactSection() {
 
             {/* LOCATION */}
             <div className="flex items-start gap-3">
-              <span className="mt-0.5 text-primary">
-                <FiMapPin size={20} />
-              </span>
-
+              <span className="mt-0.5 text-primary"><FiMapPin size={20} /></span>
               <Link
                 href="https://www.google.com/maps/place/Shenstone+Park,+Harrington+Road,+Chetpet,+Chennai"
                 target="_blank"
@@ -52,38 +70,19 @@ export default function ContactSection() {
               </Link>
             </div>
 
-            {/* PHONE NUMBERS */}
+            {/* PHONE */}
             <div className="flex items-center gap-3">
-              <span className="text-primary">
-                <FiPhone size={20} />
-              </span>
-
+              <span className="text-primary"><FiPhone size={20} /></span>
               <div className="flex flex-col leading-tight">
-                <Link
-                  href="tel:+919500081900"
-                  className="hover:text-primary transition"
-                >
-                  +91 95000 81900
-                </Link>
-                <Link
-                  href="tel:+917358438454"
-                  className="hover:text-primary transition"
-                >
-                  +91 73584 38454
-                </Link>
+                <Link href="tel:+919500081900" className="hover:text-primary transition">+91 95000 81900</Link>
+                <Link href="tel:+917358438454" className="hover:text-primary transition">+91 73584 38454</Link>
               </div>
             </div>
 
             {/* EMAIL */}
             <div className="flex items-center gap-3">
-              <span className="text-primary">
-                <FiMail size={20} />
-              </span>
-
-              <Link
-                href="mailto:contact@ohMaRgazhi.in"
-                className="hover:text-primary transition"
-              >
+              <span className="text-primary"><FiMail size={20} /></span>
+              <Link href="mailto:contact@ohMaRgazhi.in" className="hover:text-primary transition">
                 contact@ohMaRgazhi.in
               </Link>
             </div>
@@ -153,6 +152,9 @@ export default function ContactSection() {
           <Button type="submit" disabled={isSubmitting} className="mt-2 px-10 text-lg disabled:opacity-70">
             {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
+
+          {/* Status Message */}
+          {status && <p className="pt-2 text-green-600 font-medium">{status}</p>}
         </form>
       </Container>
     </section>

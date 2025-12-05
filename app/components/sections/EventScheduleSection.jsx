@@ -2,9 +2,15 @@
 
 import Image from "next/image";
 import Container from "../ui/Container";
-import { FiCalendar, FiClock, FiMapPin, FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import {
+  FiCalendar,
+  FiClock,
+  FiMapPin,
+  FiChevronLeft,
+  FiChevronRight,
+} from "react-icons/fi";
 
-import { events } from "../../data/events"; // ← using your existing file
+import { events } from "../../data/events";
 
 // Common venue for all events
 const COMMON_VENUE =
@@ -13,7 +19,6 @@ const COMMON_VENUE =
 // Convert "Dec 30" → { monthShort: "DEC", day: "30" }
 const parseDate = (dateStr) => {
   if (!dateStr) return { monthShort: "", day: "" };
-
   const [mon, day] = dateStr.split(" ");
   return {
     monthShort: mon.toUpperCase(),
@@ -21,12 +26,32 @@ const parseDate = (dateStr) => {
   };
 };
 
+// Group events by date
+const groupEventsByDate = (eventsArr) => {
+  const map = new Map();
+
+  eventsArr.forEach((ev) => {
+    const key = ev.date;
+    if (!map.has(key)) {
+      map.set(key, {
+        date: ev.date,
+        image: ev.image, // use first one
+        events: [],
+      });
+    }
+    map.get(key).events.push(ev);
+  });
+
+  return Array.from(map.values());
+};
+
 export default function EventScheduleSection() {
+  const groupedEvents = groupEventsByDate(events);
+
   return (
     <section className="bg-white py-14 sm:py-16">
       <Container>
-
-        {/* Header row */}
+        {/* Header */}
         <div className="mb-6 flex items-center justify-between gap-4">
           <h2 className="font-serif text-xl sm:text-2xl text-primary"></h2>
 
@@ -45,21 +70,21 @@ export default function EventScheduleSection() {
           </div>
         </div>
 
-        {/* Event List */}
+        {/* Grouped List */}
         <div className="space-y-4">
-          {events.map((event) => {
-            const { monthShort, day } = parseDate(event.date);
+          {groupedEvents.map((group) => {
+            const { monthShort, day } = parseDate(group.date);
 
             return (
               <article
-                key={event.id}
+                key={group.date}
                 className="grid gap-4 overflow-hidden border border-border/60 bg-white shadow-soft md:grid-cols-[minmax(0,220px)_80px_minmax(0,1fr)]"
               >
                 {/* Image */}
-                <div className="relative h-40 md:h-44">
+                <div className="relative">
                   <Image
-                    src={event.image}
-                    alt={event.title}
+                    src={group.image}
+                    alt="Event"
                     fill
                     className="object-cover"
                   />
@@ -78,43 +103,58 @@ export default function EventScheduleSection() {
                 </div>
 
                 {/* Details */}
-                <div className="flex flex-col justify-center gap-3 px-4 py-3 sm:px-6">
+                <div className="flex flex-col justify-center gap-4 px-4 py-3 sm:px-6">
+                  {/* Events under same date */}
+                  <div className="flex flex-col gap-4">
+                    {group.events.map((event) => (
+                      <div
+                        key={event.id}
+                        className="border-t border-dashed border-border/40 pt-3 first:border-t-0 first:pt-0"
+                      >
+                        {/* Category */}
+                        {event.cat && (
+                          //   <span className="inline-block text-[11px] tracking-[0.2em] uppercase text-primary/70">
+                          //     {event.cat}
+                          //   </span>
 
-                  {/* Category */}
-                  {event.cat && (
-                    <span className="inline-block text-[11px] tracking-[0.2em] uppercase text-primary/70">
-                      {event.cat}
-                    </span>
-                  )}
+                          <span className="inline-block my-3 px-3 py-[3px] text-lg uppercase tracking-[0.18em] bg-primary text-white font-sans">
+                            {event.cat}
+                          </span>
+                        )}
 
-                  {/* Title + Performer */}
-                  <h3 className="font-serif text-lg sm:text-2xl text-primary">
-                    {event.title}
-                    {event.performer && (
-                      <span className="block text-sm sm:text-base font-sans font-light text-primary/80">
-                        by {event.performer}
-                      </span>
-                    )}
-                  </h3>
+                        {/* Title + Performer */}
+                        <h3 className="font-serif text-lg sm:text-2xl text-primary">
+                          {event.title}
+                          {event.performer && (
+                            <span className="block text-sm sm:text-base font-sans font-light text-primary/80">
+                              by {event.performer}
+                            </span>
+                          )}
+                        </h3>
 
+                        {/* Date + Time */}
+                        <div className="mt-2 flex flex-wrap items-center gap-4 text-base sm:text-lg text-primary/80">
+                          <span className="inline-flex items-center gap-1">
+                            <FiCalendar size={20} className="text-primary" />
+                            {event.date.replace("Dec", "December")}
+                          </span>
+
+                          <span className="inline-flex items-center gap-1">
+                            <FiClock size={20} className="text-primary" />
+                            {event.time}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                   {/* Venue */}
                   <p className="text-base sm:text-lg font-sans font-light leading-relaxed text-primary/75 flex items-start gap-2">
-                    <FiMapPin className="text-primary mt-1 shrink-0" size={20} />
-                    <span>{COMMON_VENUE}</span>
+                    <FiMapPin
+                      className="text-primary mt-1 shrink-0"
+                      size={20}
+                    />
+                    {COMMON_VENUE}
                   </p>
-
-                  {/* Date + Time */}
-                  <div className="mt-1 flex flex-wrap items-center gap-4 text-base sm:text-lg text-primary/80">
-                    <span className="inline-flex items-center gap-1">
-                      <FiCalendar size={20} className="text-primary" />
-                      {event.date.replace("Dec", "December")}
-                    </span>
-
-                    <span className="inline-flex items-center gap-1">
-                      <FiClock size={20} className="text-primary" />
-                      {event.time}
-                    </span>
-                  </div>
                 </div>
               </article>
             );

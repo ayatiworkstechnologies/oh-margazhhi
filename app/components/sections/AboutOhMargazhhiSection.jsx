@@ -37,7 +37,7 @@ export default function AboutOhMargazhhiSection() {
             artistic brilliance.{" "}
           </p>
           <p className="text-xl md:text-lg font-sans font-light leading-relaxed text-black mt-5 ">
-            OhMargazhi is a cultural movement created to offer today’s audiences
+            OhMaRgazhi is a cultural movement created to offer today’s audiences
             a quiet refuge in the rhythm of Margazhi. It gathers dancers,
             musicians, maestros, and rasikas into a space where tradition feels
             alive, meaningful, and deeply restorative.{" "}

@@ -1,8 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { events } from "../../data/events"; // adjust path if needed
 
 const WEEKDAYS = ["S", "M", "T", "W", "T", "F", "S"];
+
+// Helper: month short → index
+const MONTHS_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 function getMonthMatrix(year, month) {
   // month: 0–11
@@ -20,6 +24,17 @@ function getMonthMatrix(year, month) {
   }
 
   return cells;
+}
+
+// Parse "Dec 16" → { monthIndex: 11, day: 16 }
+function parseEventDate(dateStr) {
+  if (!dateStr) return null;
+  const [mon, day] = dateStr.split(" ");
+  const monthIndex = MONTHS_SHORT.indexOf(mon);
+  return {
+    monthIndex,
+    day: parseInt(day, 10),
+  };
 }
 
 export default function CalendarSection() {
@@ -62,6 +77,19 @@ export default function CalendarSection() {
     day === today.getDate() &&
     currentMonth === today.getMonth() &&
     currentYear === today.getFullYear();
+
+  // 🔍 Get events for the currently selected date + month
+  const eventsForSelectedDate =
+    selectedDay != null
+      ? events.filter((ev) => {
+          const parsed = parseEventDate(ev.date);
+          if (!parsed) return false;
+          return (
+            parsed.day === selectedDay &&
+            parsed.monthIndex === currentMonth
+          );
+        })
+      : [];
 
   return (
     <section className="bg-white py-10">
@@ -135,15 +163,54 @@ export default function CalendarSection() {
               Selected:{" "}
               <span className="font-semibold">
                 {selectedDay}{" "}
-                {new Date(currentYear, currentMonth, selectedDay).toLocaleString(
-                  "en-US",
-                  { month: "long", year: "numeric" }
-                )}
+                {new Date(
+                  currentYear,
+                  currentMonth,
+                  selectedDay
+                ).toLocaleString("en-US", {
+                  month: "long",
+                  year: "numeric",
+                })}
               </span>
             </p>
           ) : (
             <p className="text-muted">Select a date from the calendar.</p>
           )}
+        </div>
+
+        {/* 🔔 Events list for that date */}
+        <div className="mt-4">
+          {selectedDay && eventsForSelectedDate.length > 0 ? (
+            <div className="space-y-3">
+              {eventsForSelectedDate.map((ev) => (
+                <div
+                  key={ev.id}
+                  className="rounded-md border border-border/60 bg-white px-3 py-2 text-left"
+                >
+                  {ev.cat && (
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-primary/70">
+                      {ev.cat}
+                    </p>
+                  )}
+                  <p className="text-sm font-serif text-primary">
+                    {ev.title}
+                  </p>
+                  {ev.performer && (
+                    <p className="text-xs font-sans text-primary/80">
+                      by {ev.performer}
+                    </p>
+                  )}
+                  <p className="mt-1 text-xs font-sans text-primary/70">
+                    {ev.time}
+                  </p>
+                </div>
+              ))}
+            </div>
+          ) : selectedDay ? (
+            <p className="text-center text-xs text-muted">
+              No events scheduled for this date.
+            </p>
+          ) : null}
         </div>
       </div>
     </section>
