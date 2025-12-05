@@ -35,8 +35,6 @@ export default function EventsSection() {
             bottomDecoration="/fream-4.svg"
           />
 
-          
-
           <div className="relative flex w-full items-center">
 
             {/* LEFT BUTTON */}

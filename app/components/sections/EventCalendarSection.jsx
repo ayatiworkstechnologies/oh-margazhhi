@@ -42,7 +42,7 @@ export default function EventCalendarSection() {
               alt=""
               width={80}
               height={260}
-              className="w-auto h-[260px]"
+              className="w-auto h-[460px]"
             />
           </div>
 
@@ -174,7 +174,7 @@ export default function EventCalendarSection() {
               alt=""
               width={80}
               height={260}
-              className="w-auto h-[260px] rotate-180"
+              className="w-auto h-[460px] rotate-180"
             />
           </div>
         </div>
