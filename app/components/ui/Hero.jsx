@@ -23,7 +23,7 @@ export default function Hero({
           </h1>
 
           {description && (
-            <p className="max-w-md text-lg leading-relaxed text-white font-light font-sans">
+            <p className="max-w-md text-lg leading-relaxed text-white font-sans font-lights">
               {description}
             </p>
           )}

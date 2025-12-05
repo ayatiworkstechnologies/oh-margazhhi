@@ -14,9 +14,23 @@ export default function EventCard({ event }) {
       {/* Content */}
       <div className="flex flex-1 flex-col px-4 pb-4 pt-3">
         
+        {/* Category */}
+        <div className="mb-2">
+          <span className="
+            inline-block 
+            px-3 py-[3px]
+            text-lg
+            uppercase tracking-[0.18em]
+            bg-primary text-white 
+            font-sans
+          ">
+            {event.cat}
+          </span>
+        </div>
+
         {/* Title */}
-        <h3 className="font-serif text-lg sm:text-xl text-black leading-snug">
-          {event.title}
+        <h3 className="font-serif text-lg sm:text-xl text-primary ">
+          {event.title} by {event.performer} 
         </h3>
 
         {/* Divider */}
@@ -24,7 +38,7 @@ export default function EventCard({ event }) {
 
         {/* Date + Location */}
         <p className="mt-2 font-sans font-light text-xs sm:text-sm uppercase tracking-[0.15em] text-black/80">
-          {event.dateTime} &nbsp;|&nbsp; {event.location}
+          {event.date} &nbsp;|&nbsp; {event.time}
         </p>
       </div>
 
