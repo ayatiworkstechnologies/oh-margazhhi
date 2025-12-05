@@ -37,7 +37,7 @@ export default function ArtistsPageSection() {
       <Container className="relative mt-10">
         <SectionTitle
           title="Artists"
-          color="text-white"
+          color="text-secondary"
           bottomDecoration="/fream-8.svg"
           className="mt-20"
         />

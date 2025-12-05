@@ -10,7 +10,7 @@ export default function GalleryPage() {
               description="Engage with dynamic performances designed to elevate community spirit and cultural connection."
               dateRange="December 15 – December 30"
               location="Chennai, Tamil Nadu " 
-              imageSrc="/hero-img.svg"
+              imageSrc="/gallery-banner.svg"
               imageAlt="About OhMaRgazhi classical dancer"
             />
             <GallerySection />

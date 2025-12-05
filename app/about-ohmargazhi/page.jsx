@@ -13,7 +13,7 @@ export default function AboutPage() {
         description="Celebrate classical artistry with performances curated for music lovers across generations."
         dateRange="December 15 – December 30"
         location="Chennai, Tamil Nadu"
-        imageSrc="/hero-img.svg"
+        imageSrc="/about-banner.svg"
         imageAlt="About OhMaRgazhi classical dancer"
       />
       <AboutOhMargazhhiSection />

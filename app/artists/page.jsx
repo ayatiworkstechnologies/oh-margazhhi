@@ -10,7 +10,7 @@ export default function ArtistsPage() {
               description="Experience concerts celebrating tradition, maestros, rhythm, devotion and Margazhi spirit."
               dateRange="December 15 – December 30"
               location="Chennai, Tamil Nadu"
-              imageSrc="/hero-img.svg"
+              imageSrc="/artist-banner.svg"
               imageAlt="About OhMaRgazhi classical dancer"
             />
             <ArtistsPageSection />

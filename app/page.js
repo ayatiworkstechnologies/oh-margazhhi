@@ -19,7 +19,7 @@ export default function HomePage() {
       description="Celebrate soulful performances honoring culture, devotion, heritage and artistry."
       dateRange="December 15 – December 30"
       location="Chennai, Tamil Nadu"
-      imageSrc="/hero-img.svg"
+      imageSrc="/home-banner.svg"
       imageAlt="OhMaRgazhi classical dancer"
     />
       {/* <HeroSection /> */}

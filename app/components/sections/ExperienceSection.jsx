@@ -45,7 +45,7 @@ export default function ExperienceSection() {
 
                 <SectionTitle
                     title="What You’ll Experience Here"
-                    color="text-white"
+                    color="text-secondary"
                     bottomDecoration="/fream-8.svg"
 
                 />
@@ -63,7 +63,7 @@ export default function ExperienceSection() {
                     {items.map((text, idx) => (
                         <div
                             key={idx}
-                            className=" bg-white text-primary py-3 w-100 text-2xl font-sans font-light shadow-lg"
+                            className=" bg-secondary text-primary py-3 w-100 text-2xl font-sans font-light shadow-lg"
                         >
                             {text}
                         </div>

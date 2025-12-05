@@ -10,9 +10,9 @@ import ArtistCard from "../cards/ArtistCard";
 import { artists } from "../../data/artists";
 
 export default function ArtistsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(1); // 1 on mobile by default
   const total = artists.length;
+  const [visibleCount, setVisibleCount] = useState(1); // 1 on mobile by default
+  const [currentPage, setCurrentPage] = useState(0);
 
   // Responsive visible count: 1 (mobile), 2 (sm/md), 3 (lg+)
   useEffect(() => {
@@ -33,27 +33,35 @@ export default function ArtistsSection() {
     return () => window.removeEventListener("resize", updateVisibleCount);
   }, []);
 
+  // Split artists into pages based on visibleCount
+  const pages = [];
+  for (let i = 0; i < total; i += visibleCount) {
+    pages.push(artists.slice(i, i + visibleCount));
+  }
+  const numPages = pages.length;
+
+  // Ensure currentPage is valid when visibleCount changes
+  useEffect(() => {
+    if (currentPage >= numPages) {
+      setCurrentPage(0);
+    }
+  }, [numPages, currentPage]);
+
   const goNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % total);
+    setCurrentPage((prev) => (prev + 1) % numPages);
   };
 
   const goPrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + total) % total);
+    setCurrentPage((prev) => (prev - 1 + numPages) % numPages);
   };
 
-  // autoplay – move one by one
+  // autoplay – move page by page
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % total);
+      setCurrentPage((prev) => (prev + 1) % numPages);
     }, 2500);
     return () => clearInterval(timer);
-  }, [total]);
-
-  // compute sliding window for current visibleCount
-  const visibleArtists = Array.from(
-    { length: Math.min(visibleCount, total) },
-    (_, i) => artists[(currentIndex + i) % total]
-  );
+  }, [numPages]);
 
   return (
     <section
@@ -87,18 +95,29 @@ export default function ArtistsSection() {
         <div className="flex flex-col items-center text-center">
           <SectionTitle
             title="Artists"
-            color="text-white"
+            color="text-secondary"
             bottomDecoration="/fream-8.svg"
           />
         </div>
 
         {/* Carousel */}
         <div className="mt-8 sm:mt-10 flex flex-col items-center gap-6">
-          {/* Visible cards */}
-          <div className="w-full max-w-5xl">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {visibleArtists.map((artist) => (
-                <ArtistCard key={artist.id} artist={artist} />
+          {/* Slider viewport */}
+          <div className="w-full max-w-5xl overflow-hidden">
+            {/* Track */}
+            <div
+              className="flex transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${currentPage * 100}%)` }}
+            >
+              {pages.map((group, pageIndex) => (
+                <div
+                  key={pageIndex}
+                  className="min-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+                >
+                  {group.map((artist) => (
+                    <ArtistCard key={artist.id} artist={artist} />
+                  ))}
+                </div>
               ))}
             </div>
           </div>
@@ -114,9 +133,10 @@ export default function ArtistsSection() {
               <FiChevronLeft size={18} />
             </button>
 
+            {/* Optional page indicator */}
             {/* <span className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-secondary">
-              {String(currentIndex + 1).padStart(2, "0")} /{" "}
-              {String(total).padStart(2, "0")}
+              {String(currentPage + 1).padStart(2, "0")} /{" "}
+              {String(numPages).padStart(2, "0")}
             </span> */}
 
             <button
