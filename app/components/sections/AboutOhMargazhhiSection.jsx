@@ -11,10 +11,10 @@ export default function AboutOhMargazhhiSection() {
         {/* LEFT FULL IMAGE */}
         <div className="relative h-full min-h-[360px] bg-primary">
           <Image
-            src="/about-img-2.png"
+            src="/about-img-2.svg"
             alt="Temple About OhMargazhhi"
-            width={900}
-            height={1200}
+            width={600}
+            height={350}
             className="h-full w-full object-cover"
           />
         </div>
