@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 import Link from "next/link";
 import Container from "../ui/Container";
