@@ -13,99 +13,99 @@ export default function FeaturedGuest() {
   useEffect(() => {
     const interval = setInterval(
       () => setCurrent((prev) => (prev + 1) % images.length),
-      3000 // change every 3s
+      3000
     );
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section className="relative bg-white py-10 sm:py-12 lg:py-16">
-      <Container className="relative grid gap-8 lg:gap-12 items-start md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-        {/* LEFT — PATTERN + IMAGE */}
-        <div className="relative flex justify-center md:justify-start">
-          {/* LEFT — FRAME + IMAGE (SAME HEIGHT) */}
-          <div className="relative flex justify-center md:justify-start">
-            <div className="relative flex gap-4">
-              {/* LEFT FRAME – desktop only */}
-              <div className="hidden lg:block h-full">
-                <Image
-                  src="/fream-6.svg"
-                  alt=""
-                  width={400}
-                  height={780}
-                  className="h-auto w-auto"
-                />
-              </div>
-
-              {/* MAIN IMAGE SLIDER */}
-              <div className="relative  h-full overflow-hidden">
-                {images.map((src, index) => (
-                  <Image
-                    key={src}
-                    src={src}
-                    alt="Aruna Sairam"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 480px"
-                    className={`absolute inset-0 object-cover transition-opacity duration-1000 ease-in-out ${
-                      index === current ? "opacity-100" : "opacity-0"
-                    }`}
-                    priority={index === 0}
-                    aria-hidden={index !== current}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* MAIN IMAGE SLIDER */}
-          <div className="relative w-full max-w-[480px] h-[600px] overflow-hidden">
-            {images.map((src, index) => (
+      <Container className="relative grid gap-8 lg:gap-12 items-start md:grid-cols-2">
+        {/* LEFT — STICKY FRAME + IMAGE SLIDER */}
+        <div className="relative md:sticky md:top-24 self-start flex justify-center md:justify-start w-full">
+          <div className="flex gap-4 items-stretch w-full md:w-auto">
+            {/* FRAME – desktop only */}
+            <div className="hidden lg:block relative w-[100px] xl:w-[120px] h-[520px] xl:h-[600px]">
               <Image
-                key={src}
-                src={src}
-                alt="Aruna Sairam"
+                src="/fream-6.svg"
+                alt=""
                 fill
-                sizes="(max-width: 768px) 100vw, 480px"
-                className={`absolute inset-0 object-cover transition-opacity duration-1000 ease-in-out ${
-                  index === current ? "opacity-100" : "opacity-0"
-                }`}
-                priority={index === 0}
-                aria-hidden={index !== current}
+                className="object-contain"
               />
-            ))}
+            </div>
+
+            {/* MAIN IMAGE SLIDER */}
+            <div className="relative w-full max-w-[480px] h-[500px] sm:h-[400px] md:h-[520px] lg:h-[600px] overflow-hidden">
+              {images.map((src, index) => (
+                <Image
+                  key={src}
+                  src={src}
+                  alt="Aruna Sairam"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 480px"
+                  className={`absolute inset-0 object-cover transition-opacity duration-1000 ease-in-out ${
+                    index === current ? "opacity-100" : "opacity-0"
+                  }`}
+                  priority={index === 0}
+                  aria-hidden={index !== current}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* RIGHT — TEXT BLOCK */}
+        {/* RIGHT — SCROLLING TEXT BLOCK */}
         <div className="relative">
-          <SectionTitle align="left" title="Aruna Sairam - Voice of Devotion" />
+          <SectionTitle align="left" title="Lasya Choodamani In Memory of Janaki Ammal" />
 
           <div className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-xl leading-relaxed text-black font-sans font-light space-y-3">
             <p>
-              Padmashri, Sangita Kalanidhi, Chevalier Aruna Sairam is celebrated
-              as a transformative force in Carnatic music, revered for her
-              spiritual intensity, artistic precision, and ability to bridge
-              centuries-old tradition with contemporary resonance.
+               With profound reverence
+              and immense pride, we gather to honour an artiste whose very
+              presence elevates the realm of Carnatic music - Padmashri, Sangita
+              Kalanidhi, Chevalier Aruna Sairam - a musician of incandescent
+              devotion and divine artistic poise. A luminous force whose voice
+              unites tradition and inner awakening, she stands as one of the
+              most influential and beloved torch bearers of our Indian classical
+              heritage.
             </p>
             <p>
-              Her voice dissolves the line between performance and prayer,
-              bringing emotional depth and devotional energy to every raga.
+              A vocalist of formidable depth, Aruna Sairam is the embodiment of
+              shraddha, bhakti, and bhava - her music carrying the fragrance of
+              centuries-old tradition while resonating effortlessly with the
+              modem soul.
             </p>
             <p>
-              From Chennai’s iconic sabhas to global stages like the BBC Proms
-              and Théâtre de la Ville, she has carried Indian classical heritage
-              with unmatched grace and authority.
+              Her voice, soulful and reverential, has the rare ability to
+              dissolve the boundary between stage and sanctum, evoking in every
+              listener a sense of inner awakening. Her renditions of ragas are
+              reflections in motion - expansive, emotive, and radiant with
+              spiritual light. Whether through the meditative stillness of an
+              alapana or the uplifting surge of an abhang, she brings to each
+              phrase emotional depth and artistic integrity that have redefined
+              the contours of contemporary Camatic performance.
             </p>
             <p>
-              Her journey reflects rigorous training, global impact, and an
-              unbroken commitment to artistic excellence. As a teacher and
-              cultural ambassador, she has shaped the next generation with
-              generosity and vision.
+              From her formative years in the gurukula tradition to her
+              celebrated presence on global stages - from the revered sabhas of
+              Chennal to the BBC Proms in London and the Théatre de la Ville,
+              Paris - Aruna Sairam has carried the essence of our Bharatiya
+              cultural soul with unmatched dignity and radiance. Her music is
+              not merely sung: it is inhabited, felt, and offered - an act of
+              devotion as much as an act of consecration. As a teacher, mentor,
+              and cultural ambassador, she has guided countless students toward
+              artistic rigour and spiritual depth. Her generosity has enriched
+              the global landscape of Indian classical music, making her an
+              enduring bridge between the sacred and the universal.
             </p>
             <p>
-              Conferment of the LASYA CHOODAMANI title acknowledges not just her
-              achievements, but the humility and inner fire that define her
-              legacy.
+              Today, as we confer upon her the prestigious title of LASYA
+              CHOODAMANI, we celebrate not only her towering contributions to
+              the world of Camatic music but also the unwavering sadhana,
+              humility, and inner fire that have shaped her extraordinary
+              journey. She stands before us as a beacon of discipline, dignity,
+              and divine elevation - a living testament to the unbroken flame of
+              our musical heritage.
             </p>
           </div>
 

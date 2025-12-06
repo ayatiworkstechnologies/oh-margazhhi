@@ -102,12 +102,12 @@ export default function ArtistsSection() {
 
         {/* Carousel */}
         {/* Carousel */}
-        <div className="m-8 sm:m-15 relative flex items-center justify-center">
+        <div className="m-15 sm:m-15 relative flex items-center justify-center">
           {/* PREV BUTTON – LEFT */}
           <button
             type="button"
             onClick={goPrev}
-            className="absolute -left-4 sm:-left-6 lg:-left-12 z-10
+            className="absolute -left-6 sm:-left-6 lg:-left-12 z-10
                flex h-10 w-10 items-center justify-center
                rounded-full border border-secondary/70
                text-secondary bg-primary/70
@@ -140,7 +140,7 @@ export default function ArtistsSection() {
           <button
             type="button"
             onClick={goNext}
-            className="absolute -right-4 sm:-right-6 lg:-right-12 z-10
+            className="absolute -right-6 sm:-right-6 lg:-right-12 z-10
                flex h-10 w-10 items-center justify-center
                rounded-full border border-secondary/70
                text-secondary bg-primary/70
