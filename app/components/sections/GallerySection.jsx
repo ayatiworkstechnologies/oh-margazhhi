@@ -129,44 +129,48 @@ export default function GallerySection() {
       </Container>
 
       {/* ⭐ MODAL OVERLAY ⭐ */}
-      {open && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-          {/* IMAGE */}
-          <div className="relative max-w-4xl w-full flex justify-center">
-            <Image
-              src={galleryImages[index]}
-              alt="Large preview"
-              width={1200}
-              height={900}
-              className="rounded-lg shadow-lg object-contain max-h-[90vh]"
-            />
-          </div>
+     {/* ⭐ MODAL OVERLAY ⭐ */}
+{open && (
+  <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    {/* IMAGE */}
+    <div className="relative max-w-4xl w-full flex justify-center">
+      <Image
+        src={galleryImages[index]}
+        alt="Large preview"
+        width={1200}
+        height={900}
+        className="rounded-lg shadow-lg object-contain max-h-[90vh]"
+      />
+    </div>
 
-          {/* CLOSE BUTTON */}
-          <button
-            className="absolute top-6 right-6 text-white text-3xl font-light hover:text-secondary transition"
-            onClick={closeModal}
-          >
-            ✕
-          </button>
+    {/* CLOSE BUTTON */}
+    <button
+      className="absolute top-4 right-4 z-50 text-white text-3xl font-light hover:text-secondary transition"
+      onClick={closeModal}
+    >
+      ✕
+    </button>
 
-          {/* PREV BUTTON */}
-          <button
-            className="absolute left-6 text-white text-4xl hover:text-secondary transition"
-            onClick={prevImage}
-          >
-            ❮
-          </button>
+    {/* PREV BUTTON */}
+    <button
+      className="absolute left-4 z-50 text-white text-4xl hover:text-secondary transition"
+      onClick={prevImage}
+      aria-label="Previous image"
+    >
+      ❮
+    </button>
 
-          {/* NEXT BUTTON */}
-          <button
-            className="absolute right-6 text-white text-4xl hover:text-secondary transition"
-            onClick={nextImage}
-          >
-            ❯
-          </button>
-        </div>
-      )}
+    {/* NEXT BUTTON */}
+    <button
+      className="absolute right-4 z-50 text-white text-4xl hover:text-secondary transition"
+      onClick={nextImage}
+      aria-label="Next image"
+    >
+      ❯
+    </button>
+  </div>
+)}
+
     </section>
   );
 }

@@ -155,5 +155,60 @@ export const artists = [
     image: "/artist/artist-26.png",
     role: "Violinist",
   },
+  {
+    id: 27,
+    name: "Artist Three",
+    image: "/artist/artist-27.png",
+    role: "Violinist",
+  },
+  {
+    id: 28,
+    name: "Artist Three",
+    image: "/artist/artist-28.png",
+    role: "Violinist",
+  },
+  {
+    id: 29,
+    name: "Artist Three",
+    image: "/artist/artist-29.png",
+    role: "Violinist",
+  },
+  {
+    id: 30,
+    name: "Artist Three",
+    image: "/artist/artist-30.png",
+    role: "Violinist",
+  },
+  {
+    id: 31,
+    name: "Artist Three",
+    image: "/artist/artist-31.png",
+    role: "Violinist",
+  },
+  {
+    id: 32,
+    name: "Artist Three",
+    image: "/artist/artist-32.png",
+    role: "Violinist",
+  },
+  {
+    id: 33,
+    name: "Artist Three",
+    image: "/artist/artist-33.png",
+    role: "Violinist",
+  },
+  {
+    id: 34,
+    name: "Artist Three",
+    image: "/artist/artist-34.png",
+    role: "Violinist",
+  },
+  {
+    id: 35,
+    name: "Artist Three",
+    image: "/artist/artist-35.png",
+    role: "Violinist",
+  },
+  
   
 ];

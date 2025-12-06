@@ -101,10 +101,24 @@ export default function ArtistsSection() {
         </div>
 
         {/* Carousel */}
-        <div className="mt-8 sm:mt-10 flex flex-col items-center gap-6">
+        {/* Carousel */}
+        <div className="m-8 sm:m-15 relative flex items-center justify-center">
+          {/* PREV BUTTON – LEFT */}
+          <button
+            type="button"
+            onClick={goPrev}
+            className="absolute -left-4 sm:-left-6 lg:-left-12 z-10
+               flex h-10 w-10 items-center justify-center
+               rounded-full border border-secondary/70
+               text-secondary bg-primary/70
+               hover:bg-secondary/10 transition"
+            aria-label="Previous artists"
+          >
+            <FiChevronLeft size={20} />
+          </button>
+
           {/* Slider viewport */}
           <div className="w-full max-w-5xl overflow-hidden">
-            {/* Track */}
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${currentPage * 100}%)` }}
@@ -122,32 +136,19 @@ export default function ArtistsSection() {
             </div>
           </div>
 
-          {/* Controls */}
-          <div className="flex items-center gap-4">
-            <button
-              type="button"
-              onClick={goPrev}
-              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-secondary/70 text-secondary hover:bg-secondary/10 transition"
-              aria-label="Previous artists"
-            >
-              <FiChevronLeft size={18} />
-            </button>
-
-            {/* Optional page indicator */}
-            {/* <span className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-secondary">
-              {String(currentPage + 1).padStart(2, "0")} /{" "}
-              {String(numPages).padStart(2, "0")}
-            </span> */}
-
-            <button
-              type="button"
-              onClick={goNext}
-              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-secondary/70 text-secondary hover:bg-secondary/10 transition"
-              aria-label="Next artists"
-            >
-              <FiChevronRight size={18} />
-            </button>
-          </div>
+          {/* NEXT BUTTON – RIGHT */}
+          <button
+            type="button"
+            onClick={goNext}
+            className="absolute -right-4 sm:-right-6 lg:-right-12 z-10
+               flex h-10 w-10 items-center justify-center
+               rounded-full border border-secondary/70
+               text-secondary bg-primary/70
+               hover:bg-secondary/10 transition"
+            aria-label="Next artists"
+          >
+            <FiChevronRight size={20} />
+          </button>
         </div>
       </Container>
     </section>

@@ -25,7 +25,7 @@ export default function FeaturedGuest() {
         <div className="relative flex justify-center md:justify-start">
           {/* LEFT — FRAME + IMAGE (SAME HEIGHT) */}
           <div className="relative flex justify-center md:justify-start">
-            <div className="relative flex gap-4 h-[600px]">
+            <div className="relative flex gap-4">
               {/* LEFT FRAME – desktop only */}
               <div className="hidden lg:block h-full">
                 <Image
