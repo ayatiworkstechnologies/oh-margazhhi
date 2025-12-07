@@ -19,7 +19,7 @@ export default function EventCard({ event }) {
           <span className="
             inline-block 
             px-3 py-[3px]
-            text-lg
+            text-sm
             uppercase tracking-[0.18em]
             bg-primary text-white 
             font-sans

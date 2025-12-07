@@ -97,7 +97,7 @@ export default function FeaturedGuest() {
               centuries-old tradition while resonating effortlessly with the
               modem soul.
             </p>
-            <p>
+            {/* <p>
               Her voice, soulful and reverential, has the rare ability to
               dissolve the boundary between stage and sanctum, evoking in every
               listener a sense of inner awakening. Her renditions of ragas are
@@ -128,7 +128,7 @@ export default function FeaturedGuest() {
               journey. She stands before us as a beacon of discipline, dignity.
               and divine elevation - a living testament to the unbroken flame of
               our musical heritage.
-            </p>
+            </p> */}
           </div>
 
           {/* BOTTOM DIVIDER FRAME */}

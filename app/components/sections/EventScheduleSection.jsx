@@ -117,7 +117,7 @@ export default function EventScheduleSection() {
                           //     {event.cat}
                           //   </span>
 
-                          <span className="inline-block my-3 px-3 py-[3px] text-lg uppercase tracking-[0.18em] bg-primary text-white font-sans">
+                          <span className="inline-block my-3 px-3 py-[3px] text-base uppercase tracking-[0.18em] bg-primary text-white font-sans">
                             {event.cat}
                           </span>
                         )}

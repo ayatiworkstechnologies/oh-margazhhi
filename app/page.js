@@ -10,6 +10,7 @@ import EventCalendarSection from "./components/sections/EventCalendarSection";
 import CalendarSection from "./components/sections/CalendarSection";
 import GallerySection from "./components/sections/GallerySection";
 import Hero from "./components/ui/Hero";
+import HomePopupModal from "./components/sections/HomePopupModal";
 
 export default function HomePage() {
   return (
@@ -23,6 +24,8 @@ export default function HomePage() {
       imageAlt="OhMaRgazhi classical dancer"
     />
       {/* <HeroSection /> */}
+            <HomePopupModal />
+
       <IntroSection />
       <MarqueeStrip />
       <FeaturedGuest />
