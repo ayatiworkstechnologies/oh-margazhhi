@@ -28,7 +28,7 @@ export default function StickySocialIcons() {
         px-2 py-3 shadow-lg
       "
     >
-      {/* ✅ SMALL CLOSE BUTTON (MATCHES ICON SCALE) */}
+      {/* CLOSE BUTTON */}
       <button
         onClick={() => setOpen(false)}
         aria-label="Close social icons"
@@ -43,7 +43,7 @@ export default function StickySocialIcons() {
 
       {/* INSTAGRAM */}
       <Link
-        href="https://instagram.com"
+        href="https://www.instagram.com/ohmargazhi"
         target="_blank"
         aria-label="Instagram"
         className="text-[#E1306C] hover:scale-110 transition-transform"
@@ -53,7 +53,7 @@ export default function StickySocialIcons() {
 
       {/* FACEBOOK */}
       <Link
-        href="https://facebook.com"
+        href="https://www.facebook.com/OhMaRgazhi"
         target="_blank"
         aria-label="Facebook"
         className="text-[#1877F2] hover:scale-110 transition-transform"
@@ -61,9 +61,9 @@ export default function StickySocialIcons() {
         <FaFacebookF size={20} />
       </Link>
 
-      {/* X */}
+      {/* X (Twitter) */}
       <Link
-        href="https://x.com"
+        href="https://x.com/OhMaRgazhi"
         target="_blank"
         aria-label="X"
         className="text-black hover:scale-110 transition-transform"
@@ -73,7 +73,7 @@ export default function StickySocialIcons() {
 
       {/* YOUTUBE */}
       <Link
-        href="https://youtube.com"
+        href="https://www.youtube.com/@OhMaRgazhi"
         target="_blank"
         aria-label="YouTube"
         className="text-[#FF0000] hover:scale-110 transition-transform"
@@ -93,7 +93,7 @@ export default function StickySocialIcons() {
 
       {/* THREADS */}
       <Link
-        href="https://www.threads.net"
+        href="https://www.threads.net/@ohmargazhi"
         target="_blank"
         aria-label="Threads"
         className="text-black hover:scale-110 transition-transform"
