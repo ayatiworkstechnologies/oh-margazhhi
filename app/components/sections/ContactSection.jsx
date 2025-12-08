@@ -92,10 +92,10 @@ export default function ContactSection() {
                 <FiMail size={20} />
               </span>
               <Link
-                href="mailto:contact@ohmargazhi.com"
+                href="mailto:lasya.culturehub@gmail.com"
                 className="hover:text-primary transition"
               >
-                contact@ohmargazhi.com
+                lasya.culturehub@gmail.com
               </Link>
             </div>
           </div>
