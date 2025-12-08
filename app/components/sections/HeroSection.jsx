@@ -24,7 +24,7 @@ export default function HeroSection() {
           {/* Date badge */}
           <div className="inline-flex flex-col items-start bg-secondary px-6 py-3 text-[11px] tracking-wide opacity-0 animate-[slideUp_0.7s_ease-out_forwards] [animation-delay:0.3s]">
             <span className="font-semibold font-serif text-2xl text-primary">
-              December 15 - January 14
+              December 16 - January 14
             </span>
             <span className="mt-1 text-lg text-primary font-light font-sans">
               Chennai, Tamil Nadu

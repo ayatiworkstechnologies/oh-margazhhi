@@ -8,7 +8,7 @@ export default function EventsPage() {
       <Hero
               title="Margazhi Comes Alive with Voices That Shape Tomorrow’s Cultural Landscape"
               description="Immerse in a future-ready festival where legacy performances meet evolving artistic expression."
-              dateRange="December 15 – December 30"
+              dateRange="December 16 – December 30"
               location="Chennai, Tamil Nadu"
               imageSrc="/event-banner.svg"
               imageAlt="About OhMaRgazhi classical dancer"

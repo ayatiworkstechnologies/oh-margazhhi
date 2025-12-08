@@ -28,22 +28,29 @@ export default function AboutOhMargazhhiSection() {
             </h2>
 
             {/* SUBTITLE */}
-            <p className=" font-serif text-xl md:text-2xl leading-relaxed text-black mb-4 mt-5 md:mt-10">
+            {/* <p className=" font-serif text-xl md:text-2xl leading-relaxed text-black mb-4 mt-5 md:mt-10">
               A Sanctuary of Classical Arts for Today’s Solace
-            </p>
+            </p> */}
 
             {/* DESCRIPTION */}
             <p className="text-xl md:text-lg font-sans font-light leading-relaxed text-black mt-5 md:mt-10 mb-4">
-              A modern homage to a timeless season of devotion, discipline, and
-              artistic brilliance.{" "}
+              Lasya signifies joyous artistic expression, a dance of beauty,
+              grace, and elegance. Mythologically, it responds to Shiva's
+              Thandavam by Goddess Parvathi, a force that brings equilibrium to
+              the worlds This initiative by the Ramaniyam Group, aims to promote
+              art and culture in South Chennai. It seeks to balance traditional
+              and contemporary art through diverse events. By hosting prominent
+              figures in the artistic community, Lasya has established itself as
+              a cultural hub in the Old Mahabalipuram Road corridor.
             </p>
             <p className="text-xl md:text-lg font-sans font-light leading-relaxed text-black mt-5 ">
-              OhMaRgazhi is a cultural movement created to offer today’s audiences
-              a quiet refuge in the rhythm of Margazhi. It gathers dancers,
-              musicians, maestros, and rasikas into a space where tradition feels
-              alive, meaningful, and deeply restorative.{" "}
+              OhMaRgazhi celebrates this richness but with its own unique
+              identity. Here, we blend tradition with the energy of a
+              fast-growing modern locality. We give a platform to artists,
+              students, professionals, and cultural enthusiasts who live in OMR
+              but crave the Margazhi magic.
             </p>
-            <p className="text-xl md:text-lg font-sans font-light leading-relaxed text-black mt-5 ">
+            {/* <p className="text-xl md:text-lg font-sans font-light leading-relaxed text-black mt-5 ">
               Each gathering is shaped not as a performance, but as an offering,
               an intimate moment of connection to rhythm, devotion, and India’s
               classical artistic soul.{" "}
@@ -51,7 +58,7 @@ export default function AboutOhMargazhhiSection() {
             <p className="text-xl md:text-lg font-sans font-light leading-relaxed text-black mt-5 ">
               Here, Margazhi breathes again, calm, sacred, and welcoming to all
               who seek solace and meaning through art.{" "}
-            </p>
+            </p> */}
 
             {/* BOTTOM ARROW ICON */}
             <div className="mt-6">

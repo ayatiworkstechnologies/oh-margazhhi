@@ -8,7 +8,7 @@ export default function GalleryPage() {
       <Hero
               title="Where Every Note, Step and Story Reimagines the Margazhi Experience"
               description="Engage with dynamic performances designed to elevate community spirit and cultural connection."
-              dateRange="December 15 – December 30"
+              dateRange="December 16 – December 30"
               location="Chennai, Tamil Nadu " 
               imageSrc="/gallery-banner.svg"
               imageAlt="About OhMaRgazhi classical dancer"

@@ -89,10 +89,10 @@ export default function FeaturedGuest() {
 
         {/* RIGHT — TEXT BLOCK (SCROLLS) */}
         <div className="relative">
-          <SectionTitle align="left" title="Lasya the Culture Hub" />
+          <SectionTitle align="left" title="Lasya Choodamani Award" />
 
           <div className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-xl leading-relaxed text-black font-sans font-light space-y-3">
-            <p>
+            {/* <p>
               Lasya signifies joyous artistic expression, a dance of beauty,
               grace, and elegance. Mythologically, it responds to Shiva's
               Thandavam by Goddess Parvathi, a force that brings equilibrium to
@@ -101,7 +101,7 @@ export default function FeaturedGuest() {
               and contemporary art through diverse events. By hosting prominent
               figures in the artistic community, Lasya has established itself as
               a cultural hub in the Old Mahabalipuram Road corridor.
-            </p>
+            </p> */}
             <p>
               The Lasya Choodamani Award stands as one of the most prestigious
               honours presented in the realm of Indian classical performing
@@ -130,13 +130,13 @@ export default function FeaturedGuest() {
               of the arts, and their role as guiding lights for the generations
               that follow.
             </p>
-            <p>
+            {/* <p>
               OhMaRgazhi celebrates this richness but with its own unique
               identity. Here, we blend tradition with the energy of a
               fast-growing modern locality. We give a platform to artists,
               students, professionals, and cultural enthusiasts who live in OMR
               but crave the Margazhi magic.
-            </p>
+            </p> */}
           </div>
 
           {/* BOTTOM DIVIDER FRAME */}

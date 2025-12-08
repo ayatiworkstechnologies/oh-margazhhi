@@ -8,7 +8,7 @@ export default function ArtistsPage() {
       <Hero
               title="Margazhi Evenings Filled with Music, Culture, Devotion and Spirit "
               description="Experience concerts celebrating tradition, maestros, rhythm, devotion and Margazhi spirit."
-              dateRange="December 15 – December 30"
+              dateRange="December 16 – December 30"
               location="Chennai, Tamil Nadu"
               imageSrc="/artist-banner.svg"
               imageAlt="About OhMaRgazhi classical dancer"

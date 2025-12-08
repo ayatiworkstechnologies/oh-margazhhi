@@ -18,7 +18,7 @@ export default function HomePage() {
       <Hero
       title="Where Margazhi Music Breathes Life Into Tradition Again"
       description="Celebrate soulful performances honoring culture, devotion, heritage and artistry."
-      dateRange="December 15 – December 30"
+      dateRange="December 16 – December 30"
       location="Chennai, Tamil Nadu"
       imageSrc="/home-banner.svg"
       imageAlt="OhMaRgazhi classical dancer"
