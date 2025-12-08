@@ -7,7 +7,7 @@ import SectionTitle from "../ui/SectionTitle";
 
 const images = ["/about-img-4.png", "/about-img-1.png"];
 
-const captions = ["Bombay Jayashri · 2024", "Aruna Sairam · 2025"];
+const captions = ["Bombay Jayashri - 2024", "Aruna Sairam - 2025"];
 
 export default function FeaturedGuest() {
   const [current, setCurrent] = useState(0);
