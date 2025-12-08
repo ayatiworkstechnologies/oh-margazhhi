@@ -7,6 +7,8 @@ import SectionTitle from "../ui/SectionTitle";
 
 const images = ["/about-img-1.png", "/about-img-4.png"];
 
+const captions = ["Bombay Jayashri · 2024", "Aruna Sairam · 2025"];
+
 export default function FeaturedGuest() {
   const [current, setCurrent] = useState(0);
 
@@ -58,12 +60,14 @@ export default function FeaturedGuest() {
           </div>
 
           {/* MAIN IMAGE SLIDER (VISIBLE) */}
+          {/* MAIN IMAGE SLIDER (VISIBLE) */}
           <div className="relative w-full max-w-[480px] h-[600px] overflow-hidden">
+            {/* Images */}
             {images.map((src, index) => (
               <Image
                 key={src}
                 src={src}
-                alt="Aruna Sairam"
+                alt={captions[index]}
                 fill
                 sizes="(max-width: 768px) 100vw, 480px"
                 className={`absolute inset-0 object-cover transition-opacity duration-1000 ease-in-out ${
@@ -73,62 +77,66 @@ export default function FeaturedGuest() {
                 aria-hidden={index !== current}
               />
             ))}
+
+            {/* Bottom Name Overlay */}
+            <div className="absolute bottom-0 left-0 w-full bg-primary backdrop-blur-sm px-4 py-3 transition-opacity duration-700">
+              <p className="text-white text-lg text-center sm:text-xl font-serif tracking-wide">
+                {captions[current]}
+              </p>
+            </div>
           </div>
         </div>
 
         {/* RIGHT — TEXT BLOCK (SCROLLS) */}
         <div className="relative">
-          <SectionTitle align="left" title="Lasya Choodamani In Memory of Janaki Ammal " />
+          <SectionTitle align="left" title="Lasya the Culture Hub" />
 
           <div className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-xl leading-relaxed text-black font-sans font-light space-y-3">
             <p>
-              With profound reverence
-              and immense pride, we gather to honour an artiste whose very
-              presence elevates the realm of Carnatic music - Padmashri, Sangita
-              Kalanidhi, Chevalier Aruna Sairam - a musician of incandescent
-              devotion and divine artistic poise. A luminous force whose voice
-              unites tradition and inner awakening, she stands as one of the
-              most influential and beloved torch bearers of our Indian classical
-              heritage.
+              Lasya signifies joyous artistic expression, a dance of beauty,
+              grace, and elegance. Mythologically, it responds to Shiva's
+              Thandavam by Goddess Parvathi, a force that brings equilibrium to
+              the worlds This initiative by the Ramaniyam Group, aims to promote
+              art and culture in South Chennai. It seeks to balance traditional
+              and contemporary art through diverse events. By hosting prominent
+              figures in the artistic community, Lasya has established itself as
+              a cultural hub in the Old Mahabalipuram Road corridor.
             </p>
             <p>
-              A vocalist of formidable depth, Aruna Sairam is the embodiment of
-              shraddha, bhakti, and bhava - her music carrying the fragrance of
-              centuries-old tradition while resonating effortlessly with the
-              modem soul.
-            </p>
-            {/* <p>
-              Her voice, soulful and reverential, has the rare ability to
-              dissolve the boundary between stage and sanctum, evoking in every
-              listener a sense of inner awakening. Her renditions of ragas are
-              reflections in motion - expansive, emotive, and radiant with
-              spiritual light. Whether through the meditative stillness of an
-              alapana or the uplifting surge of an abhang, she brings to each
-              phrase emotional depth and artistic integrity that have redefined
-              the contours of contemporary Camatic performance.
+              The Lasya Choodamani Award stands as one of the most prestigious
+              honours presented in the realm of Indian classical performing
+              arts. Conceived to celebrate extraordinary artistry, unwavering
+              dedication, and a lifetime of contribution to the cultural
+              landscape, this award is bestowed upon individuals who have
+              elevated their art form through excellence, innovation, and
+              profound commitment.
             </p>
             <p>
-              From her formative years in the gurukula tradition to her
-              celebrated presence on global stages - from the revered sabhas of
-              Chennal to the BBC Proms in London and the Théatre de la Ville,
-              Paris - Aruna Sairam has carried the essence of our Bharatiya
-              cultural soul with unmatched dignity and radiance. Her music is
-              not merely sung: it is inhabited, felt, and offered - an act of
-              devotion as much as an act of consecration.As a teacher, mentor,
-              and cultural ambassador, she has guided countless students toward
-              artistic rigour and spiritual depth. Her generosity has enriched
-              the global landscape of Indian classical music, making her an
-              enduring bridge between the sacred and the universal.
+              Rooted in the spirit of lasya the graceful, expressive, and divine
+              essence of classical artistic tradition the title “Choodamani,”
+              meaning “the crest jewel,” reflects the award’s purpose: to
+              recognise artists who shine as rare and radiant gems in the world
+              of classical art. The award acknowledges not only their mastery
+              over technique and tradition but also their ability to touch
+              hearts, inspire generations, and uphold the sacred lineage of
+              Indian cultural heritage.
             </p>
             <p>
-              Today, as we confer upon her the prestigious title of LASYA
-              CHOODAMANI, we celebrate not only her towering contributions to
-              the world of Camatic music but also the unwavering sadhana,
-              humility, and inner fire that have shaped her extraordinary
-              journey. She stands before us as a beacon of discipline, dignity.
-              and divine elevation - a living testament to the unbroken flame of
-              our musical heritage.
-            </p> */}
+              Each year, the Lasya Choodamani Award is conferred upon an eminent
+              artist whose body of work exemplifies artistic brilliance,
+              cultural significance, and a deep sense of devotion to their
+              craft. Through this honour, we celebrate their enduring legacy,
+              their invaluable contribution to the preservation and propagation
+              of the arts, and their role as guiding lights for the generations
+              that follow.
+            </p>
+            <p>
+              OhMaRgazhi celebrates this richness but with its own unique
+              identity. Here, we blend tradition with the energy of a
+              fast-growing modern locality. We give a platform to artists,
+              students, professionals, and cultural enthusiasts who live in OMR
+              but crave the Margazhi magic.
+            </p>
           </div>
 
           {/* BOTTOM DIVIDER FRAME */}

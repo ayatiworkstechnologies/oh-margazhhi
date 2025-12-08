@@ -83,7 +83,7 @@ export default function StickySocialIcons() {
 
       {/* WHATSAPP */}
       <Link
-        href="https://wa.me/919999999999"
+        href="https://wa.me/917200416231"
         target="_blank"
         aria-label="WhatsApp"
         className="text-[#25D366] hover:scale-110 transition-transform"

@@ -7,7 +7,6 @@ import { X } from "lucide-react";
 export default function HomePopupModal() {
   const [open, setOpen] = useState(false);
 
-  // Open popup on first load
   useEffect(() => {
     setOpen(true);
   }, []);
@@ -18,30 +17,49 @@ export default function HomePopupModal() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
-      onClick={closeModal} // click outside to close
+      className="
+        fixed inset-0 z-50
+        flex items-center justify-center
+        bg-black/70 backdrop-blur-sm
+        px-4
+      "
+      onClick={closeModal}
     >
-      {/* Modal content wrapper */}
+      {/* MODAL WRAPPER */}
       <div
-        className="relative max-w-lg w-full bg-white rounded-lg overflow-hidden shadow-xl"
-        onClick={(e) => e.stopPropagation()} // prevent close on inner click
+        className="
+          relative w-full
+          max-w-[90vw] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-3xl
+          bg-black rounded-lg overflow-hidden shadow-xl
+        "
+        onClick={(e) => e.stopPropagation()}
       >
         {/* CLOSE BUTTON */}
         <button
           onClick={closeModal}
-          className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/70 text-white hover:bg-black transition"
+          className="
+            absolute right-3 top-3 z-20
+            flex h-8 w-8 items-center justify-center
+            rounded-full bg-black/70 text-white
+            hover:bg-black transition
+          "
         >
           <X size={18} />
         </button>
 
-        {/* IMAGE */}
-        <div className="relative w-full h-full">
+        {/* ✅ IMAGE WITH RESPONSIVE HEIGHT */}
+        <div
+          className="
+            relative w-full
+            h-[98vh] sm:h-[98vh] md:h-[98vh] lg:h-[98vh] xl:h-[98vh]
+          "
+        >
           <Image
-            src="/hero.png"   // 🔁 change to your image path
+            src="/hero.png"    // change if needed
             alt="Home popup"
-            width={800}
-            height={800}
-            className="w-full h-full object-cover"
+            fill
+            priority
+            className=""
           />
         </div>
       </div>

@@ -77,17 +77,12 @@ export default function ContactSection() {
               </span>
               <div className="flex flex-col leading-tight">
                 <Link
-                  href="tel:+919500081900"
+                  href="tel:+917200416231"
                   className="hover:text-primary transition"
                 >
-                  +91 95000 81900
+                  +91 7200416231
                 </Link>
-                <Link
-                  href="tel:+917358438454"
-                  className="hover:text-primary transition"
-                >
-                  +91 73584 38454
-                </Link>
+                
               </div>
             </div>
 
