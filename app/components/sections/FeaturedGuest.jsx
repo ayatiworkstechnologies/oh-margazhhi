@@ -5,7 +5,7 @@ import Image from "next/image";
 import Container from "../ui/Container";
 import SectionTitle from "../ui/SectionTitle";
 
-const images = ["/about-img-1.png", "/about-img-4.png"];
+const images = ["/about-img-4.png", "/about-img-1.png"];
 
 const captions = ["Bombay Jayashri · 2024", "Aruna Sairam · 2025"];
 
