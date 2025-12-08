@@ -3,7 +3,7 @@ export default function EventCard({ event }) {
     <article className="flex h-full flex-col overflow-hidden shadow-sm">
       
       {/* Image */}
-      <div className="aspect-4/5 w-full overflow-hidden">
+      <div className=" w-full overflow-hidden">
         <img
           src={event.image}
           alt={event.title}
