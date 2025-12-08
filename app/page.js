@@ -24,7 +24,7 @@ export default function HomePage() {
       imageAlt="OhMaRgazhi classical dancer"
     />
       {/* <HeroSection /> */}
-            <HomePopupModal />
+            {/* <HomePopupModal /> */}
 
       <IntroSection />
       <MarqueeStrip />
