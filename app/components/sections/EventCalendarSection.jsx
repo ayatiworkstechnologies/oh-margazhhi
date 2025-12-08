@@ -77,7 +77,7 @@ export default function EventCalendarSection() {
                       const hasEvent = daysWithEvents.includes(day);
 
                       let styles =
-                        "flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center text-sm sm:text-base font-light border border-transparent rounded-[2px]";
+                        "flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center text-sm sm:text-base font-light border border-transparent";
 
                       if (hasEvent) styles += " bg-[#f5eedf]";
                       if (isSelected) styles += " bg-primary text-white";
@@ -107,7 +107,7 @@ export default function EventCalendarSection() {
                     alt={selectedEvents[0]?.title || "Event poster"}
                     width={260}
                     height={380}
-                    className="h-auto w-full max-w-[260px] object-cover rounded-sm"
+                    className="h-auto w-full max-w-[260px] object-cover "
                   />
                 )}
               </div>
