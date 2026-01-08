@@ -14,8 +14,11 @@ export default function SiteFooter() {
         >
           {/* Left side */}
           <p className="whitespace-nowrap text-sm sm:text-base">
-            © 2025 <span className="font-secondary">OhMaRgazhi</span>
+            © {new Date().getFullYear()}{" "}
+            <span className="font-secondary">OhMaRgazhi</span>
           </p>
+
+          
 
           {/* Divider */}
           <span className="hidden sm:inline-block text-secondary">|</span>
